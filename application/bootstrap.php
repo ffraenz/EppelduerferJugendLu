@@ -8,10 +8,10 @@ require_once 'functions.php';
 
 // load config
 global $config;
-$config = include('config/global.php');
+$config = include('application/config/global.php');
 
-if (file_exists('config/local.php')) {
-    $config = array_merge($config, include('config/local.php'));
+if (file_exists('application/config/local.php')) {
+    $config = array_merge_recursive($config, include('config/local.php'));
 }
 
 // read url
