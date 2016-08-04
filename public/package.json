@@ -1,7 +1,16 @@
 {
-	"name": "EppelduerferJugend",
+	"name": "EppelduerferJugendLu",
 	"version": "1.0.0",
 	"author": "Fränz Friederes <fraenz@frieder.es>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "http://github.com/ffraenz/EppelduerferJugendLu.git"
+	},
+	"homepage": "https://eppelduerferjugend.lu/",
+	"bugs": {
+		"url": "https://github.com/ffraenz/redoid/issues"
+	},
 	"devDependencies": {
 		"gulp": "~3.9.1",
 		"gulp-rename": "^1.2.0",

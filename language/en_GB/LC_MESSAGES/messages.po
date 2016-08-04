@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Eppelduerfer Jugend\n"
-"POT-Creation-Date: 2016-07-13 22:40+0200\n"
-"PO-Revision-Date: 2016-07-13 22:43+0200\n"
+"POT-Creation-Date: 2016-08-04 03:15+0200\n"
+"PO-Revision-Date: 2016-08-04 03:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -28,7 +28,7 @@ msgstr "Back to homepage"
 msgid "Fehler melden"
 msgstr "Report error"
 
-#: activities.phtml:3 parts/footer.phtml:24 parts/site-nav.phtml:26
+#: activities.phtml:3 parts/footer.phtml:26 parts/site-nav.phtml:26
 msgid "Aktivitéiten"
 msgstr "Activities"
 
@@ -44,7 +44,7 @@ msgstr "Current activities"
 msgid "E puer vun eise schéinsten Erënnerungen"
 msgstr "Some of our best memories"
 
-#: contact.phtml:3 parts/footer.phtml:39 parts/site-nav.phtml:36
+#: contact.phtml:3 parts/footer.phtml:41 parts/site-nav.phtml:36
 msgid "Kontakt"
 msgstr "Contact"
 
@@ -159,7 +159,7 @@ msgstr "What is the meaning of life?"
 msgid "Et kënnen der nëmme Siwe sinn."
 msgstr "It may only be seven."
 
-#: eppeldorf.phtml:3 eppeldorf.phtml:43 index.phtml:47 parts/footer.phtml:34
+#: eppeldorf.phtml:3 eppeldorf.phtml:43 index.phtml:47 parts/footer.phtml:36
 #: parts/site-nav.phtml:31
 msgid "Eppelduerf"
 msgstr "Eppeldorf"
@@ -181,7 +181,7 @@ msgstr "Luxembourg"
 msgid "Eppelduerf, Lëtzebuerg"
 msgstr "Eppeldorf, Luxembourg"
 
-#: eppeldorf.phtml:63 parts/footer.phtml:55
+#: eppeldorf.phtml:63 parts/footer.phtml:57
 msgid "Aerenzdallgemeng"
 msgstr "Aerenzdallgemeng"
 
@@ -311,7 +311,7 @@ msgstr ""
 msgid "Eng Gemeinschaft zu Eppelduerf"
 msgstr "A community in Eppeldorf"
 
-#: index.phtml:8 parts/footer.phtml:53
+#: index.phtml:8 parts/footer.phtml:55
 msgid ""
 "E Veräi vu jonke Leit aus ganz Lëtzebuerg, déi sech regelméisseg treffen, "
 "Events organiséieren a sech fir eng Gemeinschaft zu Eppelduerf asetzen."
@@ -390,7 +390,7 @@ msgstr ""
 "You would like to get updates on the latest news of Eppelduerfer Jugend, its "
 "activities and events? Leave us a Like on our Facebook page!"
 
-#: index.phtml:170 parts/footer.phtml:9 parts/site-nav.phtml:9
+#: index.phtml:170 parts/footer.phtml:11 parts/site-nav.phtml:9
 msgid "Eppelduerfer Jugend"
 msgstr "Eppelduerfer Jugend"
 
@@ -407,38 +407,38 @@ msgstr ""
 msgid "Materiallëscht"
 msgstr "Equipment list"
 
-#: parts/footer.phtml:19 parts/site-nav.phtml:21
+#: parts/footer.phtml:21 parts/site-nav.phtml:21
 msgid "Iwwer eis"
 msgstr "About us"
 
-#: parts/footer.phtml:29 parts/section-spaghettisfest.phtml:13
+#: parts/footer.phtml:31 parts/section-spaghettisfest.phtml:13
 #: spaghettisfest.phtml:3
 msgid "Spaghettisfest"
 msgstr "Spaghettisfest"
 
-#: parts/footer.phtml:44
+#: parts/footer.phtml:46
 msgid "Facebook"
 msgstr "Facebook"
 
-#: parts/footer.phtml:55
+#: parts/footer.phtml:57
 #, php-format
 msgid "Mat frëndlecher Ënnerstëtzung vun der %s"
 msgstr "With the kind support of %s"
 
-#: parts/footer.phtml:57
+#: parts/footer.phtml:59
 #, php-format
-msgid "Websäit Design a Code vum %s."
-msgstr "Website design and code by %s."
+msgid "Entwéckelt vum %s an ënnert der MIT Lizenz op %s verfügbar."
+msgstr "Developed by %s and available on %s under the MIT license."
 
-#: parts/footer.phtml:63
+#: parts/footer.phtml:65
 msgid "IBAN & BIC"
 msgstr "IBAN & BIC"
 
-#: parts/footer.phtml:65
+#: parts/footer.phtml:67
 msgid "Siège sociale"
 msgstr "Address"
 
-#: parts/footer.phtml:67
+#: parts/footer.phtml:69
 msgid "No RCSL"
 msgstr "Nr RCSL"
 
@@ -604,6 +604,9 @@ msgstr "Share on Facebook"
 #: spaghettisfest.phtml:336
 msgid "Op Twitter deelen"
 msgstr "Share on Twitter"
+
+#~ msgid "Websäit Design a Code vum %s."
+#~ msgstr "Website design and code by %s."
 
 #~ msgid ""
 #~ "Ausserhalb vun eisen Events kanns du eist Material, wéi zum Beispill eist "
