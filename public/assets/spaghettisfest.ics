@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Eppelduerfer Jugend/Eppelduerfer Jugend v1//LB
+X-WR-TIMEZONE:Europe/Berlin
+X-WR-CALNAME:Eppelduerfer Jugend
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:spaghettisfest2016@eppelduerferjugend.lu
+SUMMARY:Spaghettisfest 2016
+DTSTAMP:20160707T000000Z
+CREATED:20160707T000000Z
+DTSTART:20160815T090000Z
+DTEND:20160816T010000Z
+DESCRIPTION:Säit iwwer 30 Joer versammelen sech op Maria Himmelfahrt, dem 15. August hongereg Leit am Pompjeesbau zu Eppelduerf. Op dësem Dag gi mëttes an owes grouss Portioune Spaghetti gekacht an d’Zesummekomme bis an d’Nuecht era gefeiert.\n\nEppelduerfer Jugend\nhttps://eppelduerferjugend.lu/spaghettisfest
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,71 @@
+
+.member {
+    display: block;
+    width: 180px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    text-decoration: none;
+
+    &__avatar {
+        width: 126px;
+        height: 126px;
+        margin: 0 27px;
+        border-radius: 75px;
+        border: none;
+        background: #dddddd;
+        color: transparent;
+        overflow: hidden;
+    }
+
+    &__avatar-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__name {
+        margin: 15px 0 1px;
+        font-weight: 500;
+    }
+
+    &__role {
+        font-size: 0.9em;
+    }
+
+    @media (min-width: $break-xs + 1) and (max-width: $break-md) {
+        width: 150px;
+        
+        &__avatar {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    @media (max-width: $break-xs) {
+        margin: 0 auto;
+        padding: 7px 0;
+        width: 310px;
+        text-align: left;
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        &__avatar {
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+
+        &__name,
+        &__role {
+            display: block;
+            margin: 0 0 0 125px;
+        }
+
+        &__name {
+            padding-top: 25px;
+        }
+    }
+}

@@ -1,0 +1,134 @@
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 10px 40px 10px 15px;
+    min-height: 40px;
+    border: none;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    color: $color-text;
+    overflow: hidden;
+    text-shadow: none;
+    text-align: left;
+    text-decoration: none;
+
+    .icon:before {
+        padding-right: 5px;
+        font-size: 18px;
+        line-height: 0;
+        transform: translate(0, 3px);
+    }
+
+    // disclosure icon
+    &:after {
+        @include icon('\0043');
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 36px;
+        padding: 50px 0;
+        font-size: 16px;
+        text-align: center;
+        transform: translate(0, -51%);
+    }
+
+    &:hover {
+        color: $color-ci-green;
+    }
+
+    &--block {
+        display: block;
+        width: 100%;
+    }
+
+    &--default {
+        background: #dddddd;
+        color: $color-text;
+    }
+
+    &--green {
+        background: $color-ci-green;
+        color: #ffffff;
+    }
+
+    &--red {
+        background: $color-ci-red;
+        color: #ffffff;
+    }
+
+    &--red-on-gray {
+        background: $color-ci-red;
+        color: $color-ci-gray;
+
+        &:hover {
+            background: #ffffff;
+            color: $color-ci-gray;
+        }
+    }
+
+    &--pink {
+        background: $color-ci-pink;
+        color: #ffffff;
+    }
+
+    &--facebook,
+    &--twitter {
+        background: $color-facebook;
+        color: #ffffff;
+
+        &:hover {
+            padding: 8px 38px 8px 13px;
+            border: 2px solid $color-facebook;
+            background: transparent;
+            color: $color-facebook;
+        }
+    }
+
+    &--twitter {
+        background: $color-twitter;
+        color: #ffffff;
+
+        &:hover {
+            border-color: $color-twitter;
+            color: $color-twitter;
+        }
+    }
+
+    &--default,
+    &--green,
+    &--red,
+    &--pink {
+
+        &:hover {
+            background: $color-text;
+            color: #ffffff;
+        }
+    }
+
+    &--ghost-white {
+        padding: 8px 38px 8px 13px;
+        border: 2px solid #ffffff;
+        background: transparent;
+        color: #ffffff;
+
+        &:hover {
+            background: #ffffff;
+            color: $color-text;
+        }
+    }
+
+    @media (max-width: $break-xs) {
+        display: block;
+        width: 100%;
+        padding: 13px 40px 13px 15px;
+
+        &--ghost-white {
+            padding: 11px 38px 11px 13px;
+        }
+    }
+}

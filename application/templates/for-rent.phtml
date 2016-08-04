@@ -1,0 +1,85 @@
+<?php
+
+setTitle(__("Ze verlounen"));
+
+renderTemplate('parts/header');
+
+?>
+
+<header class="site-header site-header--green">
+    <?php renderTemplate('parts/site-nav', null, 1) ?>
+
+    <div class="site-header__inner">
+        <div class="cover-heading">
+            <div class="container">
+                <h2 class="cover-heading__title"><?php echo getTitle() ?></h2>
+                <p class="cover-heading__lead"><?php echo __("Ausserhalb vun eisen Events kanns du eist Material lounen") ?></p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+
+        <div class="row row--spacing-fixed row--margin-large row--separated">
+            <div class="row__item">
+
+                <h3 class="section__heading">
+                    <?php echo __("Zelt %s", '9m × 6m') ?>
+                    <span class="price-tag">250 EUR</span>
+                </h3>
+
+                <p><?php echo __("E grousst Veranstaltungszelt mat engem Daach a féier Wänn inkl. enger Dier. Et ass fir den Asaatz bäi Reen gutt gëeegent. Vun eis gëtt et ëmmer um Kierwerlecksbal an um Spaghettisfest opgestallt.") ?></p>
+
+                <div class="section__actions">
+                    <ul class="row">
+                        <li class="row__item">
+                            <a class="btn btn--green" href="<?php echo url('contact') ?>">
+                                <span class="icon icon--tick"></span>
+                                <?php echo __("Zelt reservéieren") ?>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row__item">
+
+                <h3 class="section__heading">
+                    <?php echo __("Spullmaschinn") ?>
+                    <span class="price-tag">100 EUR</span>
+                </h3>
+
+                <p><?php echo __("Dës Industrie Spullmaschinn gëtt vun eis um Kierwerlecksbal an um Spaghettisfest agesat fir scho während dem Event Geschir, Schosselen a Glieser propper ze maachen an se erëm an de Service zeréckzeféieren. E Spullfirgang dauert just em déi 2 Minutten.") ?></p>
+
+                <div class="section__actions">
+                    <ul class="row">
+                        <li class="row__item">
+                            <a class="btn btn--green" href="<?php echo url('contact') ?>">
+                                <span class="icon icon--tick"></span>
+                                <?php echo __("Spullmaschinn reservéieren") ?>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section section--shaded section--align-center">
+    <div class="container">
+
+        <h3 class="section__heading"><?php echo __("Deng Suen ënnerstëtzen e gudden Zweck!") ?></h3>
+
+        <p><?php echo __("D'Suen, déi de Veräin duerch d'Verléine vun hire Materialien erakritt, kënnt eise Memberen zegutt. Mir kënne sou weider Aktivitéite méiglech maachen an de Clubsall ausbauen.") ?></p>
+
+    </div>
+</section>
+
+<?php
+
+renderTemplate('parts/footer');

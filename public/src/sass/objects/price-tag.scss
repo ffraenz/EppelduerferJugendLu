@@ -1,0 +1,16 @@
+
+.price-tag {
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    margin: 0 0 0 5px;
+    padding: 0 6px;
+    font-size: 19px;
+    line-height: 27px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    transform: translate(0, -6px);
+    border: 2px solid $color-text;
+    border-radius: 6px;
+}

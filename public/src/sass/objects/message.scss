@@ -1,0 +1,61 @@
+
+.message {
+    $block: &;
+    display: block;
+    position: relative;
+    float: right;
+    clear: both;
+    background: $color-ci-green;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 19px;
+    margin: 3px 0 3px 30px;
+    font-size: 0.85em;
+    max-width: 450px;
+    text-align: left;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 18px;
+        right: 0;
+        transform: translate(9px, -50%);
+        border-width: 7px 12px 7px;
+        border-style: solid;
+        border-color: transparent;
+        border-right-width: 0;
+        border-left-color: $color-ci-green;
+    }
+
+    // an reply following a non-reply
+    &:not(#{$block}--reply) + &#{$block}--reply {
+        margin-top: 10px;
+    }
+
+    // a non-reply following a reply
+    &#{$block}--reply + &:not(#{$block}--reply) {
+        margin-top: 30px;
+    }
+
+    &--reply {
+        margin-right: 30px;
+        margin-left: 0;
+        float: left;
+        background: #dddddd;
+        color: $color-text;
+
+        &:after {
+            right: auto;
+            left: 0;
+            transform: translate(-9px, -50%);
+            border-right-width: 12px;
+            border-left-width: 0;
+            border-right-color: #dddddd;
+            border-left-color: transparent;
+        }
+
+        & + &:after {
+            display: none;
+        }
+    }
+}

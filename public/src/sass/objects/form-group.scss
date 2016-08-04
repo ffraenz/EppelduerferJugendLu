@@ -1,0 +1,24 @@
+
+.form-group {
+    padding: 0 0 20px;
+
+    &__label {
+        display: block;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.8em;
+        margin: 0 0 5px;
+
+        small {
+            text-transform: none;
+            font-weight: 500;
+            font-size: 1em;
+            color: #666666;
+        }
+    }
+
+    &__input {
+
+    }
+
+}

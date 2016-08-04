@@ -1,0 +1,40 @@
+<?php
+
+setTitle('404');
+
+renderTemplate('parts/header');
+
+?>
+
+<header class="site-header site-header--green">
+    <?php renderTemplate('parts/site-nav', null, 1) ?>
+
+</header>
+
+<section class="section section--align-center">
+    <div class="container">
+
+        <h3 class="section__heading"><?php echo __("Dës Säit konnt leider net fonnt ginn!") ?></h3>
+
+        <div class="section__actions">
+            <ul class="row row--align-center">
+                <li class="row__item">
+                    <a class="btn btn--green" href="<?php echo url('index') ?>">
+                        <?php echo __("Zeréck op d'Startsäit") ?>
+                    </a>
+                </li>
+                <li class="row__item">
+                    <a class="btn btn--default" href="<?php echo url('contact') ?>">
+                        <span class="icon icon--message"></span>
+                        <?php echo __("Fehler melden") ?>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<?php
+
+renderTemplate('parts/footer');

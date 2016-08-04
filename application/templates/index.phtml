@@ -1,0 +1,218 @@
+<?php
+
+setData([
+    'open_graph_image' =>
+        getData('base_url') . '/assets/share-image-eppelduerfer-jugend.png',
+    'open_graph_title' => __("Eng Gemeinschaft zu Eppelduerf"),
+    'description' =>
+        __("E Veräi vu jonke Leit aus ganz Lëtzebuerg, déi sech regelméisseg treffen, Events organiséieren a sech fir eng Gemeinschaft zu Eppelduerf asetzen."),
+    'structured_data' => [
+        '@context' => 'http://schema.org',
+        '@type' => 'Organization',
+        'name' => 'Eppelduerfer Jugend',
+        'alternateName' => 'Club des Jeunes Eppeldorf',
+        'url' => getData('page_url'),
+        'logo' => getData('base_url') . '/assets/logo.svg',
+        'email' => 'contact@eppelduerferjugend.lu',
+        'sameAs' => 'https://www.facebook.com/eppelduerferjugend/',
+        'event' => [
+            '@type' => 'FoodEvent',
+            'url' => url('spaghettisfest', ['force_canonical' => true]),
+        ],
+    ],
+]);
+
+renderTemplate('parts/header');
+
+?>
+
+<header class="site-header site-header--hero site-header--green site-header--nav-follows">
+    <?php
+    renderTemplate('parts/site-nav', [
+        'reveal' => 'fade-in 1.0s lg+md+sm',
+        'brandHidden' => true,
+    ], 1);
+    ?>
+
+    <div class="site-header__inner">
+        <div class="cover-front-page">
+            <h2>
+                <a class="cover-front-page__logo" href="<?php echo url('index') ?>" data-action="scroll-to-content">
+                    <span class="cover-front-page__logo-part-1" data-reveal="fade-zoom-in-bottom"></span>
+                    <span class="cover-front-page__logo-part-2" data-reveal="fade-in-top-half 0.4s">Eppelduerfer</span>
+                    <span class="cover-front-page__logo-part-3" data-reveal="fade-in-top-half 0.5s">Jugend</span>
+                </a>
+            </h2>
+        </div>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+
+        <div class="row row--spacing-fixed">
+            <div class="row__item hidden-xs" style="min-height: 440px;">
+
+                <div class="luxembourg luxembourg--in-left-row">
+                    <div class="pin pin--pulsing luxembourg__eppeldorf" data-reveal="pin-fade-in 1.4s">
+                        <div class="tooltip tooltip--label tooltip--bottom tooltip--green" data-reveal="fade-in 1.9">
+                            <?php echo __("Eppelduerf") ?>
+                        </div>
+                    </div>
+                    <div class="pin luxembourg__diekirch" data-reveal="pin-fade-in 2.4s">
+                        <div class="tooltip tooltip--label tooltip--left" data-reveal="fade-in 2.9">
+                            <?php echo __("Diekirch") ?>
+                        </div>
+                    </div>
+                    <div class="pin luxembourg__luxembourg" data-reveal="pin-fade-in 2.6s">
+                        <div class="tooltip tooltip--label tooltip--right" data-reveal="fade-in 3.0">
+                            <?php echo __("Lëtzebuerg") ?>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row__item">
+
+                <h3 class="section__heading" data-reveal="fade-in-right"><?php echo __("Eng Gemeinschaft zu Eppelduerf") ?></h3>
+
+                <p data-reveal="fade-in-right 0.05s"><?php echo __("D'Eppelduerfer Jugend ass säit 1964 aktiv a gouf am August 2015 als Asbl nei gegrënnt. Haut ass de Veräin eng oppe Gemeinschaft vu jonke Leit aus ganz Lëtzebuerg. Regelméisseg Treffen, Aktivitéiten an d’Organisatioun vun traditionellen Events wéi dem Spaghettisfest, dem Kierwerlecksbal an der Kiermes schweessen d’Memberen zu enger verréckter Kludder zesummen, déi een einfach kenneléiere muss. Et ass d’Ziel vum Veräin, dëser Gemeinschaft een Doheem ze bidden, se z’erhalen a neie Memberen den Zougang z’erméiglechen.") ?></p>
+
+                <div class="section__actions">
+                    <ul class="row">
+                        <li class="row__item">
+                            <a class="btn btn--default" href="/documents/statutten.pdf" target="_blank" data-reveal="btn-fade-in-top 0.5s">
+                                <span class="icon icon--document"></span>
+                                <?php echo __("Eis Statutten") ?>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--align-center section--shaded">
+    <div class="container">
+
+        <h3 class="section__heading" data-reveal="fade-in-bottom"><?php echo __("Comité %s", '2015/2016') ?></h3>
+
+        <p data-reveal="fade-in-bottom 0.05s"><?php echo __("D'Membere vum Virstand schaffen hannert de Kulissen. Dobäi iwwerhuele sie d'Verantwortung an d'Organisatioun, fir d'Gemeinschaft vun der Eppelduerfer Jugend z'ennerstëtzen. Hier Aarbescht ass essentiell fir d'Existenz vum Veräin.") ?></p>
+
+        <div class="section__block">
+            <ul class="row row--align-center">
+                <li class="row__item order-3-lg order-3-md">
+                    <a class="member" href="https://fraenz.frieder.es/" target="_blank" data-reveal="fade-in 0.3s lg+md; fade-in-bottom 0.3 xs+sm">
+                        <div class="member__avatar">
+                            <img class="member__avatar-image" src="/assets/avatar-fraenz.jpg" alt="Fränz Friederes">
+                        </div>
+                        <div data-reveal="fade-in 1.0s lg+md">
+                            <h4 class="member__name">Fränz Friederes</h4>
+                            <span class="member__role"><?php echo __("President") ?></span>
+                        </div>
+                    </a>
+                </li>
+                <li class="row__item order-2-lg order-2-md">
+                    <div class="member" data-reveal="fade-in-left-x2 0.4s lg+md; fade-in-bottom 0.4 xs+sm">
+                        <div class="member__avatar">
+                            <img class="member__avatar-image" src="/assets/avatar-marc.jpg" alt="Marc Friederes">
+                        </div>
+                        <div data-reveal="fade-in 1.1s lg+md">
+                            <h4 class="member__name">Marc Friederes</h4>
+                            <span class="member__role"><?php echo __("Vizepresident") ?></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="row__item order-4-lg order-4-md">
+                    <div class="member" data-reveal="fade-in-right-x2 0.4s lg+md; fade-in-bottom 0.5 xs+sm">
+                        <div class="member__avatar">
+                            <img class="member__avatar-image" src="/assets/avatar-laura.jpg" alt="Laura Lentz">
+                        </div>
+                        <div data-reveal="fade-in 1.1s lg+md">
+                            <h4 class="member__name">Laura Lentz</h4>
+                            <span class="member__role"><?php echo __("Sekretärin") ?></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="row__item order-1-lg order-1-md">
+                    <div class="member" data-reveal="fade-in-left-x2 0.6s lg+md; fade-in-bottom 0.6 xs+sm">
+                        <div class="member__avatar">
+                            <img class="member__avatar-image" src="/assets/avatar-sacha.jpg" alt="Sacha Willems">
+                        </div>
+                        <div data-reveal="fade-in 1.2s lg+md">
+                            <h4 class="member__name">Sacha Willems</h4>
+                            <span class="member__role"><?php echo __("Tresorier") ?></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="row__item order-5-lg order-5-md">
+                    <div class="member" data-reveal="fade-in-right-x2 0.6s lg+md; fade-in-bottom 0.6 xs+sm">
+                        <div class="member__avatar">
+                            <img class="member__avatar-image" src="/assets/avatar-ken.jpg" alt="Ken Friederes">
+                        </div>
+                        <div data-reveal="fade-in 1.2s lg+md">
+                            <h4 class="member__name">Ken Friederes</h4>
+                            <span class="member__role"><?php echo __("Community Manager") ?></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <div class="row row--spacing-fixed row--margin-large row--separated row--margin-medium-xs">
+            <div class="row__item">
+
+                <h3 class="section__heading"><?php echo __("Fann eis op Facebook") ?></h3>
+
+                <p><?php echo __("Du wëlls iwwer Neiegkeete vun der Eppelduerfer Jugend, hiren Aktivitéiten an Events informéiert ginn? Dann hannerlooss eis e Like op eiser Facebook Säit!") ?></p>
+
+                <div class="section__actions">
+                    <ul class="row">
+                        <li class="row__item">
+                            <a class="btn btn--facebook" href="https://www.facebook.com/eppelduerferjugend/" target="_blank">
+                                <span class="icon icon--facebook"></span>
+                                <?php echo __("Eppelduerfer Jugend") ?>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row__item">
+
+                <h3 class="section__heading"><?php echo __("Ze verlounen") ?></h3>
+
+                <p><?php echo __("Ausserhalb vun eisen Events kanns du eist Material, wéi eist grousst Veranstaltungszelt oder eis Industrie Spullmaschinn lounen. Dobäi ënnerstëtz du gläichzäiteg e gudden Zweck.") ?></p>
+
+                <div class="section__actions">
+                    <ul class="row">
+                        <li class="row__item">
+                            <a class="btn btn--default" href="<?php echo url('for-rent') ?>">
+                                <span class="icon icon--hamburger"></span>
+                                <?php echo __("Materiallëscht") ?>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<?php
+
+renderTemplate('parts/section-join');
+
+renderTemplate('parts/section-language');
+
+renderTemplate('parts/footer');

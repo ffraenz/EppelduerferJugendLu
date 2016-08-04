@@ -1,0 +1,159 @@
+<?php
+
+setTitle(__("Eppelduerf"));
+
+$publicTransportUrl = sprintf(
+    'http://travelplanner.mobiliteit.lu/hafas/query.exe/dn?ZID=%s',
+    urlencode(getConfig('public_transport_station_id'))
+);
+
+$publicTransportDepartures = getPublicTransportDepartures();
+$weather = getWeather();
+
+fetchWeather();
+
+renderTemplate('parts/header');
+
+?>
+
+<header class="site-header site-header--hero">
+    <?php renderTemplate('parts/site-nav', null, 1) ?>
+
+    <div class="image-cover">
+        <img class="image-cover__image" src="/assets/photos/2013-06-29-eppeldorf.jpg">
+        <div class="image-cover__source image-cover__source--bottom-left">
+            <div class="tooltip tooltip--white tooltip--right image-cover__source-tooltip">
+                <?php echo __("Foto vum %s, %s", 'Fernand Friederes', '29. Juni 2013') ?>
+            </div>
+        </div>
+    </div>
+    <div class="site-header__inner"></div>
+    <a class="site-header__scrollable" href="#" data-action="scroll-to-content" data-reveal="fade-in-top 0.2s"></a>
+</header>
+
+<section class="section">
+    <div class="container">
+    
+        <div class="row row--spacing-fixed">
+            <div class="row__item hidden-xs" style="min-height: 440px;">
+
+                <div class="luxembourg luxembourg--in-left-row">
+                    <div class="pin pin--pulsing luxembourg__eppeldorf" data-reveal="pin-fade-in 1.4s">
+                        <div class="tooltip tooltip--label tooltip--bottom tooltip--green" data-reveal="fade-in 1.9">
+                            <?php echo __("Eppelduerf") ?>
+                        </div>
+                    </div>
+                    <div class="pin luxembourg__diekirch" data-reveal="pin-fade-in 2.4s">
+                        <div class="tooltip tooltip--label tooltip--left" data-reveal="fade-in 2.9">
+                            <?php echo __("Diekirch") ?>
+                        </div>
+                    </div>
+                    <div class="pin luxembourg__luxembourg" data-reveal="pin-fade-in 2.6s">
+                        <div class="tooltip tooltip--label tooltip--right" data-reveal="fade-in 3.0">
+                            <?php echo __("Lëtzebuerg") ?>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row__item">
+
+                <h3 class="section__heading" data-reveal="fade-in-right"><?php echo __("Eppelduerf, Lëtzebuerg") ?></h3>
+
+                <p data-reveal="fade-in-right 0.05s"><?php echo __("Eppelduerf ass eng Uertschaft an der %s a läit tëscht Bettenduerf a Beefort. D'Duerf befënnt sech op der Héicht vun 220 bis 411 Meter an zielt eppes iwwer 200 Awunner. Dat haitegt Kierchegebai als zentralt Gebai vum Duerf geet aus den Ëmbaute vun 1758 ervir. Fir d'éischte Kéier noweislech erwähnt gouf Eppelduerf schon am 9. Joerhonnert.", '<a href="http://www.aerenzdall.lu/" target="_blank">' . __("Aerenzdallgemeng") . '</a>') ?></p>
+
+                <?php if ($weather !== null) { ?>
+                <div class="section__block">
+                    <div class="row row--margin-medium stats">
+                        <div class="row__item" data-reveal="fade-in-top 0.5s">
+                            <div class="stats__label">
+                                <?php echo __("Temperatur") ?>
+                            </div>
+                            <div class="stats__value">
+                                <?php echo $weather['temperature'] ?>
+                            </div>
+                        </div>
+                        <div class="row__item" data-reveal="fade-in-top 0.7s">
+                            <div class="stats__label">
+                                <?php echo __("Loft") ?>
+                            </div>
+                            <div class="stats__value">
+                                <?php echo $weather['wind_speed'] ?>
+                            </div>
+                        </div>
+                        <div class="row__item" data-reveal="fade-in-top 0.9s">
+                            <div class="stats__label">
+                                <?php echo __("Fiichtegkeet") ?>
+                            </div>
+                            <div class="stats__value">
+                                <?php echo $weather['humidity'] ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section--shaded">
+    <div class="container">
+
+        <h3 class="section__heading"><?php echo __("Aktuell Offaartszäiten") ?></h3>
+
+        <p><?php echo __("Aktuell Offaartszäite vum ëffentlechen Transport fir d'Haltestell %s. D'Zäite vun den aneren Haltestellen zu Eppelduerf kennen eng Minutt ofwäichen. Dës Informatiounen gi vum %s gestallt.", '<em>' . __("Eppeldorf, Haaptstrooss") . '</em>', '<a href="http://www.mobiliteit.lu/" target="_blank">' . __("Verkéiersverbond") . '</a>') ?></p>
+
+        <p class="alert"><span class="icon icon--warning"></span> <?php echo __("Well d'Bréck bäi der Hessemillen futti ass, kënnt de Bus elo direkt vu Neimillen op Eppelduerf. Aus dësem Grond kennen d'Zäite liichten ofwäichen.") ?> <a href="http://www.mobiliteit.lu/actualites/infos-reseaux?mode=All&operateur=All&term=505" target="_blank"><?php echo __("Weider Informatiounen") ?></a></p>
+
+        <?php if ($publicTransportDepartures === null) { ?>
+        <p><span class="icon icon--warning"></span> <?php echo __("Déi aktuell Offaartszäite konnte leider net ofgeruff ginn.") ?></p>
+        <?php } else if (count($publicTransportDepartures) > 0) { ?>
+        <div class="section__block public-transport">
+            <ul class="public-transport__list">
+                <?php foreach ($publicTransportDepartures as $departure) { ?>
+
+                <li class="public-transport__departure">
+                    <span class="public-transport__line">
+                        <span class="icon icon--bus"></span>
+                        <?php echo $departure['line'] ?>
+                    </span>
+                    <span class="public-transport__time">
+                        <?php echo date('H:i', $departure['time']) ?>
+                    </span>
+                    <span class="public-transport__direction">
+                        <?php echo $departure['direction'] ?>
+                    </span>
+                </li>
+                <?php } ?>
+
+            </ul>
+        </div>
+        <?php } else { ?>
+        <p class="alert"><span class="icon icon--clock"></span> <?php echo __("An de nächsten %d Stonne fuere leider keng Busser duerch Eppelduerf. Weider Informatiounen fënns du am Busplang ënnen.", 10) ?></p>
+        <?php } ?>
+
+        <div class="section__actions">
+            <ul class="row">
+                <li class="row__item">
+                    <a class="btn btn--pink" href="<?php echo $publicTransportUrl ?>" target="_blank">
+                        <span class="icon icon--bus"></span>
+                        <?php echo __("Ureess plangen") ?>
+                    </a>
+                </li>
+                <li class="row__item">
+                    <a class="btn btn--default" href="http://www.mobiliteit.lu/sites/default/files/horaires/rgtr/505.pdf" target="_blank">
+                        <span class="icon icon--clock"></span>
+                        <?php echo __("Busplang Linn 505") ?>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>    
+</section>
+
+<?php
+
+renderTemplate('parts/footer');

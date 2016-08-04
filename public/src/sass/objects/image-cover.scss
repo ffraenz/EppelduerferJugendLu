@@ -1,0 +1,78 @@
+
+.image-cover {
+    $block: &;
+
+    // take up parent container
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    // object-fit can produce overflow
+    overflow: hidden;
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+
+        // fallback for object-fit and object-position
+        font-family: 'object-fit: cover; object-position: center center;';
+    }
+
+    &__source {
+        position: absolute;
+        right: $overlay-margin - 4px;
+        bottom: $overlay-margin - 4px;
+        width: 30px;
+        height: 30px;
+        padding: 4px;
+        z-index: 10;
+
+        // info icon
+        &:before {
+            @include icon('S');
+            color: #ffffff;
+            font-size: 22px;
+        }
+
+        &--bottom-left {
+            right: auto;
+            left: $overlay-margin - 4px;
+        }
+
+        // hide source tooltip by default
+        #{$block}__source-tooltip {
+            display: none;
+        }
+
+        &:hover {
+
+            // show tooltip when hovering the info icon
+            > #{$block}__source-tooltip {
+                display: block;
+            }
+        }
+    }
+
+    &--overlay-green:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #224211;
+        opacity: 0.6;
+    }
+
+    @media (max-width: $break-xs) {
+
+        &__source {
+            display: none;
+        }
+    }
+}

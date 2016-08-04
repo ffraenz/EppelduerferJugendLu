@@ -1,0 +1,61 @@
+
+@import 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700|Roboto:300,400,500,700';
+
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body,
+input,
+button,
+textarea {
+    line-height: 1.4;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: $color-text;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+textarea {
+    resize: none;
+}
+
+pre {
+    display: block;
+    padding: 20px 15px;
+    background: $color-shaded;
+    font-size: 0.8em;
+    line-height: 1.2;
+    overflow: auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.pull-right {
+    float: right;
+}
+
+@media (max-width: $break-md) {
+
+    body,
+    input,
+    button,
+    textarea {
+        font-size: 16px;
+    }
+}

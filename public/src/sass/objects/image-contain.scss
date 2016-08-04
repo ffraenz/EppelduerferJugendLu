@@ -1,0 +1,30 @@
+
+.image-contain {
+    $block: &;
+
+    // take up parent container
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
+
+        // fallback for object-fit and object-position
+        font-family: 'object-fit: contain; object-position: center center;';
+
+        &--loading {
+            
+        }
+    }
+
+    &--left #{$block}__image {
+        object-position: left center;
+        font-family: 'object-fit: contain; object-position: left center;';
+    }
+}

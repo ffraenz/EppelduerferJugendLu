@@ -1,0 +1,250 @@
+<?php
+
+setTitle(__("Kontakt"));
+
+$firstname = '';
+$lastname = '';
+$email = '';
+$phone = '';
+$message = '';
+
+$alerts = [];
+
+if (isPost())
+{
+    $success = false;
+
+    // get form data
+    $firstname = getPost('firstname');
+    $lastname = getPost('lastname');
+    $email = getPost('email');
+    $phone = getPost('phone');
+    $message = getPost('message');
+
+    // validate data
+    if (
+        validateNotEmpty($firstname) &&
+        validateNotEmpty($lastname) &&
+        validateEmail($email) &&
+        validateNotEmpty($message)
+    ) {
+
+        // filter data
+        $firstname = filterText($firstname);
+        $lastname = filterText($lastname);
+        $phone = filterText($phone);
+        $email = filterEmail($email);
+        $message = filterText($message);
+
+        // compose mail body
+        $body = '';
+        $body .= 'Numm: ' . $firstname . ' ' . $lastname . PHP_EOL;
+        $body .= 'Email: ' . $email . PHP_EOL;
+        $body .= 'Telefon: ' . (!empty($phone) ? $phone : '(Keng)') . PHP_EOL;
+        $body .= PHP_EOL . $message;
+
+        // prepare mail
+        $mail = new PHPMailer();
+
+        $mail->isSMTP();
+        $mail->SMTPAuth = false;
+        $mail->Host = 'smtp-relay.gmail.com';
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+        $mail->CharSet = 'UTF-8';
+
+        $mail->setFrom(getConfig('sender_email'), getConfig('sender_name'));
+        $mail->addAddress(getConfig('email'));
+        $mail->addReplyTo($email, sprintf('%s %s', $firstname, $lastname));
+        $mail->isHTML(false);
+
+        $mail->Subject = sprintf('Kontaktformular: %s %s', $firstname, $lastname);
+        $mail->Body = $body;
+
+        $success = $mail->send();
+    }
+
+    if ($success)
+    {
+        array_push($alerts, 'mail_sent');
+
+        // clear message
+        $message = ''; 
+    }
+    else
+    {
+        array_push($alerts, 'mail_send_error');
+    }
+}
+
+renderTemplate('parts/header');
+
+?>
+
+<header class="site-header site-header--green">
+    <?php renderTemplate('parts/site-nav', null, 1) ?>
+
+    <div class="site-header__inner">
+        <div class="cover-heading">
+            <div class="container">
+                <h2 class="cover-heading__title"><?php echo getTitle() ?></h2>
+                <p class="cover-heading__lead"><?php echo __("Sou kanns du eis erreechen") ?></p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="section section--shaded section--align-center">
+    <div class="container">
+
+        <h3 class="section__heading"><?php echo __("Schreif eis direkt un") ?></h3>
+
+        <div class="section__actions">
+            <ul class="row row--align-center">
+                <li class="row__item">
+                    <a class="btn btn--facebook" href="http://m.me/eppelduerferjugend" target="_blank">
+                        <span class="icon icon--facebook"></span>
+                        <?php echo __("Facebook Messenger") ?>
+                    </a>
+                </li>
+                <li class="row__item">
+                    <a class="btn btn--default" href="mailto:contact@eppelduerferjugend.lu">
+                        <span class="icon icon--mail"></span>
+                        <?php echo __("Email") ?>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <h3 class="section__heading"><?php echo __("Kontaktformular") ?></h3>
+
+        <?php if (in_array('mail_sent', $alerts)) { ?>
+
+        <p class="alert"><span class="icon icon--tick"></span> <?php echo __("Merci! Mir hunn deng Noriicht krut a mellen eis zeréck!") ?></p>
+        <?php } ?>
+
+        <?php if (in_array('mail_send_error', $alerts)) { ?>
+
+        <p class="alert"><span class="icon icon--warning"></span> <?php echo __("Do ass eppes schif gaangen. Fëll de Formular w.e.g. vollstänneg aus oder kontaktéier eis iwwert en anere Wee.") ?></p>
+        <?php } ?>
+
+        <form method="POST">
+
+            <div class="row row--spacing-fixed row--margin-medium row--margin-none-xs">
+                <div class="row__item">
+
+                    <div class="row row--spacing-fixed row--margin-none-xs">
+                        <div class="row__item">
+
+                            <div class="form-group">
+                                <label class="form-group__label" for="contact-firstname">
+                                    <?php echo __("Virnumm") ?>
+                                </label>
+                                <input class="form-control form-group__input" type="text" name="firstname" id="contact-firstname" value="<?php echo escapeAttr($firstname) ?>">
+                            </div>
+
+                        </div>
+                        <div class="row__item">
+
+                            <div class="form-group">
+                                <label class="form-group__label" for="contact-lastname">
+                                    <?php echo __("Nonumm") ?>
+                                </label>
+                                <input class="form-control form-group__input" type="text" name="lastname" id="contact-lastname" value="<?php echo escapeAttr($lastname) ?>">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label" for="contact-email">
+                            <?php echo __("Email") ?>
+                        </label>
+                        <input class="form-control form-group__input" type="email" name="email" id="contact-email" value="<?php echo escapeAttr($email) ?>">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-group__label" for="contact-phone">
+                            <?php echo __("Telefon") ?>
+                            <small>(<?php echo __("Optional") ?>)</small>
+                        </label>
+                        <input class="form-control form-group__input" type="text" name="phone" id="contact-phone" value="<?php echo escapeAttr($phone) ?>">
+                    </div>
+
+                </div>
+                <div class="row__item">
+
+                    <div class="form-group">
+                        <label class="form-group__label" for="contact-message">
+                            <?php echo __("Noriicht") ?>
+                        </label>
+                        <textarea class="form-control form-group__input" name="message" id="contact-message"><?php echo escapeHtml($message) ?></textarea>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="btn btn--green pull-right" type="submit"><?php echo __("Noriicht schécken") ?></button>
+
+        </form>
+
+    </div>
+</section>
+
+<section class="section section--shaded section--align-center">
+    <div class="container">
+
+        <h3 class="section__heading"><?php echo __("Oft gestallte Froen") ?></h3>
+
+        <div style="margin: 0 auto; max-width: 540px;">
+
+            <div class="message" data-reveal="fade-in-bottom">
+                <?php echo __("Muss ech Member sinn, fir un ären Aktivitéiten deelzehuelen?") ?>
+            </div>
+
+            <div class="message message--reply" data-reveal="fade-in-bottom 0.2s">
+                <?php echo __("Nee, du kanns eis och gären einfach sou besiche kommen. Mell dech am beschte virdrun un.") ?>
+            </div>
+
+            <div class="message" data-reveal="fade-in-bottom 0.7s">
+                <?php echo __("Wat sinn d'Ufuerderunge fir Member ze ginn?") ?>
+            </div>
+
+            <div class="message message--reply" data-reveal="fade-in-bottom 0.9s">
+                <?php echo __("E Mindestalter vu 16 Joer, d'Kotisatioun an der Héicht vun 10€ an de Wëllen, sech aktiv um Veräinsliewen ze bedeelege sinn déi eenzeg Viraussetzunge fir bäizetrieden.") ?>
+            </div>
+
+            <div class="message" data-reveal="fade-in-bottom 1.4s">
+                <?php echo __("Muss ech net zu Eppelduerf wunnen, fir Member ze ginn?") ?>
+            </div>
+
+            <div class="message message--reply" data-reveal="fade-in-bottom 1.6s">
+                <?php echo __("Dës Aschränkung gouf bäi der Neigrënnung vum Veräin 2015 opgehuewen. De Gros vun eise Memberen wunnt tatsächlech net zu Eppelduerf.") ?>
+            </div>
+
+            <div class="message message--reply" data-reveal="fade-in-bottom 1.8s">
+                <?php echo __("Déi meescht Aktivitéiten, wéi och de Clubsall sinn zu Eppelduerf situéiert. Et huet dobäi awer keen eppes dovun, eng Grenz ronderëm d'Duerf ze zéien.") ?>
+            </div>
+
+            <div class="message" data-reveal="fade-in-bottom 2.2s">
+                <?php echo __("Wat ass de Sënn vum Liewen?") ?>
+            </div>
+
+            <div class="message message--reply" data-reveal="fade-in-bottom 2.4s">
+                <?php echo __("Et kënnen der nëmme Siwe sinn.") ?>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<?php
+
+renderTemplate('parts/footer');

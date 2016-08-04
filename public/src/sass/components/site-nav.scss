@@ -1,0 +1,128 @@
+
+.site-nav {
+    $block: &;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 10;
+
+    &__brand {
+        margin: 0;
+        padding: 0 20px;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__logo {
+        display: block;
+        position: relative;
+        font-size: 0;
+        width: 65px;
+        height: $nav-height;
+        color: inherit;
+        margin: 0 auto;
+        text-decoration: none;
+
+        &:before {
+            content: 'b';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'eppelduerfer-jugend';
+            font-size: 70px;
+            font-weight: normal;
+            font-style: normal;
+        }
+    }
+
+    &__list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-direction: row;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    &__item {
+
+        .icon {
+            padding-right: 2px;
+
+            &:before {
+                transform: translate(0, 1px);
+            }
+        }
+
+        &--toggle {
+            display: none;
+        }
+    }
+
+    &__link {
+        display: block;
+        position: relative;
+        height: $nav-height;
+        line-height: $nav-height;
+        padding: 0 19px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: bold;
+        color: inherit;
+    }
+
+    @media (max-width: $break-xs) {
+        flex-direction: column;
+        background: #ffffff;
+        color: $color-text;
+
+        &__brand {
+            order: 0;
+
+            &--hidden {
+                display: block;
+            }
+        }
+
+        &__logo {
+            width: auto;
+            height: 120px;
+            padding: 30px 0;
+
+            &:before {
+                font-size: 90px;
+            }
+        }
+
+        &__list {
+            flex-direction: column;
+            background: $color-shaded;
+        }
+
+        &__link {
+            text-align: left;
+
+            .icon--hamburger {
+                padding-right: 10px;
+            }
+        }
+
+        &__item {
+            display: none;
+            border-top: 1px solid #dddddd;
+
+            &--toggle {
+                display: block;
+                border-top: none;
+            }
+        }
+
+        &--expanded #{$block}__item {
+            display: block;
+        }
+    }
+}

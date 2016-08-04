@@ -1,0 +1,119 @@
+<?php
+
+setTitle(__("Aktivitéiten"));
+
+$activities = getActivities();
+
+// load gallery photos
+$photos = null;
+
+try {
+    $json = file_get_contents('data/photo-gallery/eppelduerfer-jugend.json');
+    $photos = json_decode($json, true);
+
+    if (!is_array($photos)) {
+        $photos = null;
+    }
+} catch (Exception $e) {
+    $photos = null;
+}
+
+$monthTranslations = [
+    'Jan', 'Feb', 'Mäe', 'Abr', 'Mee', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'
+];
+
+renderTemplate('parts/header');
+
+?>
+
+<header class="site-header site-header--white">
+    <?php renderTemplate('parts/site-nav', null, 1) ?>
+
+    <div class="site-header__inner">
+        <div class="cover-heading">
+            <div class="container">
+                <h2 class="cover-heading__title"><?php echo getTitle() ?></h2>
+                <p class="cover-heading__lead"><?php echo __("Wat eis Memberen zesummen dreift") ?></p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<?php renderTemplate('parts/section-spaghettisfest') ?>
+
+<?php if ($activities !== null && count($activities) > 0) { ?>
+<section class="section section--shaded" style="min-height: 500px;">
+    <div class="container">
+
+        <h3 class="section__heading"><?php echo __("Eis aktuell Aktivitéiten") ?></h3>
+
+        <ul class="block-list block-list--cols-3">
+            <?php foreach ($activities as $activity) { ?>
+
+            <li class="block-list__item">
+                <div class="block-list__block">
+                    <div class="cal-sheet cal-sheet--square<?php echo $activity['time'] > time() ? ' cal-sheet--red' : '' ?>">
+                        <span class="cal-sheet__month"><?php echo $monthTranslations[date('n', $activity['time']) - 1] ?></span>
+                        <span class="cal-sheet__day"><?php echo date('d', $activity['time']) ?></span>
+                    </div>
+                </div>
+                <div class="block-list__block">
+                    <span class="block-list__title"><?php echo $activity['title'] ?></span>
+                    <?php if ($activity['location'] !== null) { ?>
+                    <br><span class="block-list__detail"><?php echo $activity['location'] ?></span>
+                    <?php } ?>
+                </div>
+            </li>
+            <?php } ?>
+
+        </ul>
+
+    </div>
+</section>
+<?php } ?>
+
+<?php if ($photos !== null && count($photos) > 0) { ?>
+
+<section class="section section--align-center">
+    <div class="container">
+
+        <h3 class="section__heading"><?php echo __("E puer vun eise schéinsten Erënnerungen") ?></h3>
+
+        <div class="section__block">
+            <div class="photo-gallery">
+
+                <?php for ($i = 0; $i < count($photos); $i ++) {
+                    $photo = $photos[$i]; ?>
+
+                <a class="photo-gallery__photo"
+                   title="<?php echo escapeAttr($photo['title']) ?>"
+                   data-url="<?php echo $photo['image']['url'] ?>"
+                   data-thumb-url="<?php echo $photo['thumbnail']['url'] ?>"
+                   data-reveal="fade-in-bottom <?php echo number_format($i * 0.15, 2, '.', '') ?>s"
+                   href="#">
+                    <img class="photo-gallery__image"
+                         src="<?php echo $photo['thumbnail']['url'] ?>"
+                         width="<?php echo $photo['thumbnail']['width'] ?>"
+                         height="<?php echo $photo['thumbnail']['height'] ?>"
+                         title="<?php echo escapeAttr($photo['title']) ?>"
+                         alt="<?php echo escapeAttr($photo['title']) ?>">
+                </a>
+                <?php } ?>
+
+                <div class="photo-gallery__overlay overlay overlay--hidden">
+                    <a class="overlay__btn-close" href="#"></a>
+                    <a class="overlay__btn-next" href="#"></a>
+                    <a class="overlay__btn-previous" href="#"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<?php } ?>
+
+<?php
+
+renderTemplate('parts/section-join');
+
+renderTemplate('parts/footer');

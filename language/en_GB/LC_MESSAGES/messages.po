@@ -1,0 +1,661 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Eppelduerfer Jugend\n"
+"POT-Creation-Date: 2016-07-13 22:40+0200\n"
+"PO-Revision-Date: 2016-07-13 22:43+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ../../../application/templates\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.phtml:17
+msgid "Dës Säit konnt leider net fonnt ginn!"
+msgstr "This page could not be found!"
+
+#: 404.phtml:23
+msgid "Zeréck op d'Startsäit"
+msgstr "Back to homepage"
+
+#: 404.phtml:29
+msgid "Fehler melden"
+msgstr "Report error"
+
+#: activities.phtml:3 parts/footer.phtml:24 parts/site-nav.phtml:26
+msgid "Aktivitéiten"
+msgstr "Activities"
+
+#: activities.phtml:36
+msgid "Wat eis Memberen zesummen dreift"
+msgstr "What brings our members together"
+
+#: activities.phtml:48
+msgid "Eis aktuell Aktivitéiten"
+msgstr "Current activities"
+
+#: activities.phtml:80
+msgid "E puer vun eise schéinsten Erënnerungen"
+msgstr "Some of our best memories"
+
+#: contact.phtml:3 parts/footer.phtml:39 parts/site-nav.phtml:36
+msgid "Kontakt"
+msgstr "Contact"
+
+#: contact.phtml:91
+msgid "Sou kanns du eis erreechen"
+msgstr "How you can get in touch with us"
+
+#: contact.phtml:100
+msgid "Schreif eis direkt un"
+msgstr "Message us directly"
+
+#: contact.phtml:107
+msgid "Facebook Messenger"
+msgstr "Facebook Messenger"
+
+#: contact.phtml:113 contact.phtml:167
+msgid "Email"
+msgstr "Email"
+
+#: contact.phtml:125
+msgid "Kontaktformular"
+msgstr "Contact form"
+
+#: contact.phtml:129
+msgid "Merci! Mir hunn deng Noriicht krut a mellen eis zeréck!"
+msgstr "Thank you! We got your message and will get back to you!"
+
+#: contact.phtml:134
+msgid ""
+"Do ass eppes schif gaangen. Fëll de Formular w.e.g. vollstänneg aus oder "
+"kontaktéier eis iwwert en anere Wee."
+msgstr ""
+"Something went wrong. Please verify your input or contact us in a different "
+"way."
+
+#: contact.phtml:147
+msgid "Virnumm"
+msgstr "Firstname"
+
+#: contact.phtml:157
+msgid "Nonumm"
+msgstr "Lastname"
+
+#: contact.phtml:174
+msgid "Telefon"
+msgstr "Phone"
+
+#: contact.phtml:175
+msgid "Optional"
+msgstr "Optional"
+
+#: contact.phtml:185
+msgid "Noriicht"
+msgstr "Message"
+
+#: contact.phtml:193
+msgid "Noriicht schécken"
+msgstr "Send message"
+
+#: contact.phtml:203
+msgid "Oft gestallte Froen"
+msgstr "Frequently Asked Questions"
+
+#: contact.phtml:208
+msgid "Muss ech Member sinn, fir un ären Aktivitéiten deelzehuelen?"
+msgstr "Am I required to be a member to participate in activities?"
+
+#: contact.phtml:212
+msgid ""
+"Nee, du kanns eis och gären einfach sou besiche kommen. Mell dech am beschte "
+"virdrun un."
+msgstr "No, you’re welcome to visit us! Please contact us in advance."
+
+#: contact.phtml:216
+msgid "Wat sinn d'Ufuerderunge fir Member ze ginn?"
+msgstr "What are the requirements for membership?"
+
+#: contact.phtml:220
+msgid ""
+"E Mindestalter vu 16 Joer, d'Kotisatioun an der Héicht vun 10€ an de Wëllen, "
+"sech aktiv um Veräinsliewen ze bedeelege sinn déi eenzeg Viraussetzunge fir "
+"bäizetrieden."
+msgstr ""
+"The minimum age of 16 years, a membership fee of 10€ and the will, to "
+"participate in club activities are the only requirements for membership."
+
+#: contact.phtml:224
+msgid "Muss ech net zu Eppelduerf wunnen, fir Member ze ginn?"
+msgstr "Do I need to live in Eppeldorf to be eligible for membership?"
+
+#: contact.phtml:228
+msgid ""
+"Dës Aschränkung gouf bäi der Neigrënnung vum Veräin 2015 opgehuewen. De Gros "
+"vun eise Memberen wunnt tatsächlech net zu Eppelduerf."
+msgstr ""
+"This requirement has been removed during the reestablishment of the club in "
+"2015. The majority of our members do not live in Eppeldorf."
+
+#: contact.phtml:232
+msgid ""
+"Déi meescht Aktivitéiten, wéi och de Clubsall sinn zu Eppelduerf situéiert. "
+"Et huet dobäi awer keen eppes dovun, eng Grenz ronderëm d'Duerf ze zéien."
+msgstr ""
+"Most of the activities in addition to the club hall are located in "
+"Eppeldorf. However, nobody profits from building walls around the village."
+
+#: contact.phtml:236
+msgid "Wat ass de Sënn vum Liewen?"
+msgstr "What is the meaning of life?"
+
+#: contact.phtml:240
+msgid "Et kënnen der nëmme Siwe sinn."
+msgstr "It may only be seven."
+
+#: eppeldorf.phtml:3 eppeldorf.phtml:43 index.phtml:47 parts/footer.phtml:34
+#: parts/site-nav.phtml:31
+msgid "Eppelduerf"
+msgstr "Eppeldorf"
+
+#: eppeldorf.phtml:26
+#, php-format
+msgid "Foto vum %s, %s"
+msgstr "Photo by %s, %s"
+
+#: eppeldorf.phtml:48 index.phtml:52
+msgid "Diekirch"
+msgstr "Diekirch"
+
+#: eppeldorf.phtml:53 index.phtml:57
+msgid "Lëtzebuerg"
+msgstr "Luxembourg"
+
+#: eppeldorf.phtml:61
+msgid "Eppelduerf, Lëtzebuerg"
+msgstr "Eppeldorf, Luxembourg"
+
+#: eppeldorf.phtml:63 parts/footer.phtml:55
+msgid "Aerenzdallgemeng"
+msgstr "Aerenzdallgemeng"
+
+#: eppeldorf.phtml:63
+#, php-format
+msgid ""
+"Eppelduerf ass eng Uertschaft an der %s a läit tëscht Bettenduerf a Beefort. "
+"D'Duerf befënnt sech op der Héicht vun 220 bis 411 Meter an zielt eppes "
+"iwwer 200 Awunner. Dat haitegt Kierchegebai als zentralt Gebai vum Duerf "
+"geet aus den Ëmbaute vun 1758 ervir. Fir d'éischte Kéier noweislech erwähnt "
+"gouf Eppelduerf schon am 9. Joerhonnert."
+msgstr ""
+"Eppeldorf is a village in the commune of %s, in eastern Luxembourg between "
+"Bettendorf and Beaufort. The village is situated at an altitude from 220 to "
+"411 meters and has over 200 inhabitants. Today's church building as the "
+"centre of the village originates from its reconstruction in 1758. Eppeldorf "
+"was first mentioned in the 9th century."
+
+#: eppeldorf.phtml:70
+msgid "Temperatur"
+msgstr "Temperature"
+
+#: eppeldorf.phtml:78
+msgid "Loft"
+msgstr "Wind speed"
+
+#: eppeldorf.phtml:86
+msgid "Fiichtegkeet"
+msgstr "Humidity"
+
+#: eppeldorf.phtml:104
+msgid "Aktuell Offaartszäiten"
+msgstr "Current departure times"
+
+#: eppeldorf.phtml:106
+msgid "Eppeldorf, Haaptstrooss"
+msgstr "Eppeldorf, Haaptstrooss"
+
+#: eppeldorf.phtml:106
+msgid "Verkéiersverbond"
+msgstr "Verkéiersverbond"
+
+#: eppeldorf.phtml:106
+#, php-format
+msgid ""
+"Aktuell Offaartszäite vum ëffentlechen Transport fir d'Haltestell %s. "
+"D'Zäite vun den aneren Haltestellen zu Eppelduerf kennen eng Minutt "
+"ofwäichen. Dës Informatiounen gi vum %s gestallt."
+msgstr ""
+"These are the current public transport departure times of the station %s. "
+"Departure times of the other stations in Eppeldorf could vary a minute. This "
+"information is provided by %s."
+
+#: eppeldorf.phtml:109
+msgid "Déi aktuell Offaartszäite konnte leider net ofgeruff ginn."
+msgstr "The current departure times could not be retrieved."
+
+#: eppeldorf.phtml:132
+#, php-format
+msgid ""
+"An de nächsten %d Stonne fuere leider keng Busser duerch Eppelduerf. Weider "
+"Informatiounen fënns du am Busplang ënnen."
+msgstr ""
+"There is no bus arriving in Eppeldorf in the next %d hours. Find more "
+"information in the bus schedule below."
+
+#: eppeldorf.phtml:140
+msgid "Ureess plangen"
+msgstr "Plan a trip"
+
+#: eppeldorf.phtml:146
+msgid "Busplang Linn 505"
+msgstr "Schedule for Bus 505"
+
+#: for-rent.phtml:3 index.phtml:179
+msgid "Ze verlounen"
+msgstr "For rent"
+
+#: for-rent.phtml:16
+msgid "Ausserhalb vun eisen Events kanns du eist Material lounen"
+msgstr "Outside of our events you can rent our equipment"
+
+#: for-rent.phtml:29
+#, php-format
+msgid "Zelt %s"
+msgstr "Tent %s"
+
+#: for-rent.phtml:33
+msgid ""
+"E grousst Veranstaltungszelt mat engem Daach a féier Wänn inkl. enger Dier. "
+"Et ass fir den Asaatz bäi Reen gutt gëeegent. Vun eis gëtt et ëmmer um "
+"Kierwerlecksbal an um Spaghettisfest opgestallt."
+msgstr ""
+
+#: for-rent.phtml:40
+msgid "Zelt reservéieren"
+msgstr "Reserve tent"
+
+#: for-rent.phtml:50
+msgid "Spullmaschinn"
+msgstr "Dishwasher"
+
+#: for-rent.phtml:54
+msgid ""
+"Dës Industrie Spullmaschinn gëtt vun eis um Kierwerlecksbal an um "
+"Spaghettisfest agesat fir scho während dem Event Geschir, Schosselen a "
+"Glieser propper ze maachen an se erëm an de Service zeréckzeféieren. E "
+"Spullfirgang dauert just em déi 2 Minutten."
+msgstr ""
+
+#: for-rent.phtml:61
+msgid "Spullmaschinn reservéieren"
+msgstr "Reserve dishwasher"
+
+#: for-rent.phtml:76
+msgid "Deng Suen ënnerstëtzen e gudden Zweck!"
+msgstr "Your money will support a good cause!"
+
+#: for-rent.phtml:78
+msgid ""
+"D'Suen, déi de Veräin duerch d'Verléine vun hire Materialien erakritt, kënnt "
+"eise Memberen zegutt. Mir kënne sou weider Aktivitéite méiglech maachen an "
+"de Clubsall ausbauen."
+msgstr ""
+
+#: index.phtml:6 index.phtml:65
+msgid "Eng Gemeinschaft zu Eppelduerf"
+msgstr "A community in Eppeldorf"
+
+#: index.phtml:8 parts/footer.phtml:53
+msgid ""
+"E Veräi vu jonke Leit aus ganz Lëtzebuerg, déi sech regelméisseg treffen, "
+"Events organiséieren a sech fir eng Gemeinschaft zu Eppelduerf asetzen."
+msgstr ""
+"A youth club of young people from across Luxembourg who regularly meet, "
+"organise events and are committed to a community in Eppeldorf."
+
+#: index.phtml:67
+msgid ""
+"D'Eppelduerfer Jugend ass säit 1964 aktiv a gouf am August 2015 als Asbl nei "
+"gegrënnt. Haut ass de Veräin eng oppe Gemeinschaft vu jonke Leit aus ganz "
+"Lëtzebuerg. Regelméisseg Treffen, Aktivitéiten an d’Organisatioun vun "
+"traditionellen Events wéi dem Spaghettisfest, dem Kierwerlecksbal an der "
+"Kiermes schweessen d’Memberen zu enger verréckter Kludder zesummen, déi een "
+"einfach kenneléiere muss. Et ass d’Ziel vum Veräin, dëser Gemeinschaft een "
+"Doheem ze bidden, se z’erhalen a neie Memberen den Zougang z’erméiglechen."
+msgstr ""
+"The Eppelduerfer Jugend is active since 1964 and has been reestablished as a "
+"non-profit organisation in August 2015. Today the club represents an open "
+"community of young people from across Luxembourg. Regular meetings, "
+"activities and the organisation of traditional events like the "
+"Spaghettisfest, the Kierwerlecksbal or the Kiermes forge the members into a "
+"crazy bunch that you should absolutely get to know. Supporting this "
+"community in Eppeldorf and allowing more people to join are among the main "
+"goals of this association."
+
+#: index.phtml:74
+msgid "Eis Statutten"
+msgstr "Our statute"
+
+#: index.phtml:88
+#, php-format
+msgid "Comité %s"
+msgstr "Board %s"
+
+#: index.phtml:90
+msgid ""
+"D'Membere vum Virstand schaffen hannert de Kulissen. Dobäi iwwerhuele sie "
+"d'Verantwortung an d'Organisatioun, fir d'Gemeinschaft vun der Eppelduerfer "
+"Jugend z'ennerstëtzen. Hier Aarbescht ass essentiell fir d'Existenz vum "
+"Veräin."
+msgstr ""
+"The board members work behind the scenes. They take responsibility and "
+"organise meetings, activities and events to support a community in "
+"Eppeldorf. Their work is essential to the existence of the club."
+
+#: index.phtml:101
+msgid "President"
+msgstr "Chairman"
+
+#: index.phtml:112
+msgid "Vizepresident"
+msgstr "Vice-chairman"
+
+#: index.phtml:123
+msgid "Sekretärin"
+msgstr "Secretary"
+
+#: index.phtml:134
+msgid "Tresorier"
+msgstr "Treasurer"
+
+#: index.phtml:145
+msgid "Community Manager"
+msgstr "Community Manager"
+
+#: index.phtml:161
+msgid "Fann eis op Facebook"
+msgstr "Find us on Facebook"
+
+#: index.phtml:163
+msgid ""
+"Du wëlls iwwer Neiegkeete vun der Eppelduerfer Jugend, hiren Aktivitéiten an "
+"Events informéiert ginn? Dann hannerlooss eis e Like op eiser Facebook Säit!"
+msgstr ""
+"You would like to get updates on the latest news of Eppelduerfer Jugend, its "
+"activities and events? Leave us a Like on our Facebook page!"
+
+#: index.phtml:170 parts/footer.phtml:9 parts/site-nav.phtml:9
+msgid "Eppelduerfer Jugend"
+msgstr "Eppelduerfer Jugend"
+
+#: index.phtml:181
+msgid ""
+"Ausserhalb vun eisen Events kanns du eist Material, wéi eist grousst "
+"Veranstaltungszelt oder eis Industrie Spullmaschinn lounen. Dobäi ënnerstëtz "
+"du gläichzäiteg e gudden Zweck."
+msgstr ""
+"Outside of our events you can rent our equipment, e.g. our large tent or our "
+"industrial dishwasher. At the same time your money will support a good cause!"
+
+#: index.phtml:188
+msgid "Materiallëscht"
+msgstr "Equipment list"
+
+#: parts/footer.phtml:19 parts/site-nav.phtml:21
+msgid "Iwwer eis"
+msgstr "About us"
+
+#: parts/footer.phtml:29 parts/section-spaghettisfest.phtml:13
+#: spaghettisfest.phtml:3
+msgid "Spaghettisfest"
+msgstr "Spaghettisfest"
+
+#: parts/footer.phtml:44
+msgid "Facebook"
+msgstr "Facebook"
+
+#: parts/footer.phtml:55
+#, php-format
+msgid "Mat frëndlecher Ënnerstëtzung vun der %s"
+msgstr "With the kind support of %s"
+
+#: parts/footer.phtml:57
+#, php-format
+msgid "Websäit Design a Code vum %s."
+msgstr "Website design and code by %s."
+
+#: parts/footer.phtml:63
+msgid "IBAN & BIC"
+msgstr "IBAN & BIC"
+
+#: parts/footer.phtml:65
+msgid "Siège sociale"
+msgstr "Address"
+
+#: parts/footer.phtml:67
+msgid "No RCSL"
+msgstr "Nr RCSL"
+
+#: parts/section-join.phtml:13
+msgid "Du bass interesséiert bäi eis Member ze ginn?"
+msgstr "Are you interested in joining us?"
+
+#: parts/section-join.phtml:15
+msgid ""
+"Du hues Loscht dech z'engagéieren, un der Organisatioun vun Events ze "
+"wuessen an dobäi nei Leit kennenzeléieren? Wou s du wunns, deng "
+"Nationalitéit, däi Geschlecht ewéi deng sexuell Orientéierung spille bäi eis "
+"keng Roll. Sierf eis Wëllkomm!"
+msgstr ""
+"You want to engage yourself, mature through the organisation of events and "
+"meet some new people? Where you live, your nationality, your gender nor your "
+"sexual orientation matter to us. You're always welcome."
+
+#: parts/section-join.phtml:22
+msgid "Schreif eis"
+msgstr "Contact us"
+
+#: parts/section-join.phtml:28
+msgid "Bäitrëtt Formular"
+msgstr "Membership form"
+
+#: parts/section-spaghettisfest.phtml:16 spaghettisfest.phtml:10
+#: spaghettisfest.phtml:58
+msgid ""
+"Säit iwwer 30 Joer versammelen sech op Maria Himmelfahrt, dem 15. August "
+"hongereg Leit zu Eppelduerf. Op dësem Dag gi mëttes an owes grouss Portioune "
+"Spaghetti gekacht an d’Zesummekomme bis an d’Nuecht era gefeiert."
+msgstr ""
+"For over 30 years hungry people gather in Eppeldorf on the feast day of the "
+"Assumption of Mary, August 15th. Here we cook big spaghetti portions at "
+"midday and in the evening. After that we celebrate the gathering until late "
+"at night."
+
+#: parts/section-spaghettisfest.phtml:22
+msgid "Weider Informatiounen"
+msgstr "More information"
+
+#: parts/site-nav.phtml:16
+msgid "Menü"
+msgstr "Menu"
+
+#: spaghettisfest.phtml:8 spaghettisfest.phtml:56
+msgid "Wëllkomm um gréisste Spaghettisfest an der Groussregioun!"
+msgstr "Welcome to the largest spaghetti feast in the Greater Region!"
+
+#: spaghettisfest.phtml:58
+msgid ""
+"D’Eppelduerfer Jugend ass prett a freet sech, Iech zerwéieren ze kënnen!"
+msgstr "The Eppelduerfer Jugend is ready and looking forward to serve you!"
+
+#: spaghettisfest.phtml:65
+msgid "An de Kalenner androen"
+msgstr "Add to calendar"
+
+#: spaghettisfest.phtml:71
+msgid "Op Facebook deelhuelen"
+msgstr "Attend on Facebook"
+
+#: spaghettisfest.phtml:87
+msgid "Ëffnungszäiten"
+msgstr "Opening hours"
+
+#: spaghettisfest.phtml:91
+msgid "Datum"
+msgstr "Date"
+
+#: spaghettisfest.phtml:92
+msgid "15. August"
+msgstr "August 15th"
+
+#: spaghettisfest.phtml:96 spaghettisfest.phtml:103 spaghettisfest.phtml:108
+#: spaghettisfest.phtml:115
+msgid "Spaghetti + Bar"
+msgstr "Spaghetti + Bar"
+
+#: spaghettisfest.phtml:119
+msgid "Bar"
+msgstr "Bar"
+
+#: spaghettisfest.phtml:129
+msgid "Präisser"
+msgstr "Pricing"
+
+#: spaghettisfest.phtml:133
+msgid "Entrée"
+msgstr "Admission price"
+
+#: spaghettisfest.phtml:134
+msgid "Gratis"
+msgstr "Free"
+
+#: spaghettisfest.phtml:138 spaghettisfest.phtml:145
+msgid "All-You-Can-Eat"
+msgstr "All-You-Can-Eat"
+
+#: spaghettisfest.phtml:149 spaghettisfest.phtml:154
+msgid "Kleng Portioun"
+msgstr "Small portion"
+
+#: spaghettisfest.phtml:161
+msgid "Gedrénks"
+msgstr "Drinks"
+
+#: spaghettisfest.phtml:171
+msgid "Variatiounen"
+msgstr "Flavours"
+
+#: spaghettisfest.phtml:174
+msgid "Bolognese"
+msgstr "Bolognese"
+
+#: spaghettisfest.phtml:175
+msgid "Carbonara"
+msgstr "Carbonara"
+
+#: spaghettisfest.phtml:176
+msgid "Pesto"
+msgstr "Pesto"
+
+#: spaghettisfest.phtml:177
+msgid "Arabiata"
+msgstr "Arabiata"
+
+#: spaghettisfest.phtml:182
+msgid "Bäi all Portioun Spaghetti inkl."
+msgstr "Included with every serving."
+
+#: spaghettisfest.phtml:262
+msgid "Urees"
+msgstr "Getting there"
+
+#: spaghettisfest.phtml:272
+msgid "Urees plangen"
+msgstr "Plan a trip"
+
+#: spaghettisfest.phtml:280
+msgid "Mat frëndlecher Ënnerstëtzung"
+msgstr "With kind support"
+
+#: spaghettisfest.phtml:321
+msgid "Sharing is Caring"
+msgstr "Sharing is Caring"
+
+#: spaghettisfest.phtml:323
+msgid ""
+"Du fënns dat esou cool wéi mir? Mir brauchen deng Hëllef! Behal et net fir "
+"dech, deel et, ziel et denge Leit weider a luet se an laanscht ze kommen, "
+"fir mat eis e richteg gudden Owend ze verbréngen!"
+msgstr ""
+"You like the idea of a spaghetti feast as much as we do? We need your help! "
+"Do not keep it to yourself! Share it and invite your folks to join us in "
+"having a fantastic evening!"
+
+#: spaghettisfest.phtml:330
+msgid "Op Facebook deelen"
+msgstr "Share on Facebook"
+
+#: spaghettisfest.phtml:336
+msgid "Op Twitter deelen"
+msgstr "Share on Twitter"
+
+#~ msgid ""
+#~ "Ausserhalb vun eisen Events kanns du eist Material, wéi zum Beispill eist "
+#~ "grousst Veranstaltungszelt oder eis Industrie Spullmaschinn lounen. Dobäi "
+#~ "ënnerstëtz du gläichzäiteg e gudden Zweck."
+#~ msgstr ""
+#~ "Outside of our events you can rent our equipment, e.g. our large tent or "
+#~ "our industrial dishwasher. At the same time your money will support a "
+#~ "good cause!"
+
+#~ msgid "Ärenzdallgemeng"
+#~ msgstr "Ärenzdallgemeng"
+
+#~ msgid ""
+#~ "D'Membere vum Virstand schaffen hannert de Kulissen. Dobäi iwwerhuele sie "
+#~ "d'Verantwortung an d'Organisatioun, fir d'Gemeinschaft vun der "
+#~ "Eppelduerfer Jugend z'ennerstëtzen. Hier Aarbescht ass Essentiel fir "
+#~ "d'Existenz vum Veräin."
+#~ msgstr ""
+#~ "The board members work behind the scenes. They take responsibility and "
+#~ "organise meetings, activities and events to support a community in "
+#~ "Eppeldorf. Their work is essential to the existence of the club."
+
+#~ msgid ""
+#~ "Ausserhalb vun eisen Events kanns du eist Material, wéi zum Beispill "
+#~ "d'Zelt oder eis Industrie Spullmaschinn lounen. Dobäi ënnerstëtz du "
+#~ "gläichzäiteg e gudden Zweck."
+#~ msgstr ""
+#~ "Outside of our events you can rent our equipment, e.g. our tent or our "
+#~ "industrial dishwasher. At the same time your money will support a good "
+#~ "cause!"
+
+#~ msgid "Deelhuelen"
+#~ msgstr "Attend"
+
+#~ msgid "De Clubsall, eist zweet Doheem"
+#~ msgstr "The club hall, our second home"
+
+#~ msgid "Eppeldorf, Eppelduerf"
+#~ msgstr "Eppeldorf, Eppelduerf"
+
+#~ msgid "Mat frëndlecher Ënnerstëtzung vun der %s."
+#~ msgstr "With the kind support of the %s."
+
+#~ msgid "Méi iwwer eis"
+#~ msgstr "More about us"
+
+#~ msgid "Méi zu Eppelduerf"
+#~ msgstr "More about Eppeldorf"
+
+#~ msgid "Wee mir sinn a wat eis ausmëscht"
+#~ msgstr "Who we are and what we do"
+
+#~ msgid "Comité"
+#~ msgstr "Board"

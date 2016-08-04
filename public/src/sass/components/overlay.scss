@@ -1,0 +1,112 @@
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    background: #ffffff;
+    z-index: 20;
+
+    &__btn-close,
+    &__btn-next,
+    &__btn-previous {
+        display: block;
+        position: absolute;
+        top: $overlay-margin;
+        right: $overlay-margin;
+        width: $overlay-control-size + $overlay-control-padding * 2;
+        height: $overlay-control-size + $overlay-control-padding * 2;
+        margin: -$overlay-control-padding;
+        opacity: 0.5;
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 57.1%;
+            height: 2px;
+            background: $color-text;
+            transform: translate(-50%, -50%) rotate(45deg);
+            transform-origin: 50% 50%;
+        }
+
+        &:after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &:hover {
+            opacity: 1.0;
+        }
+    }
+
+    &__btn-next,
+    &__btn-previous {
+        top: 53%;
+        transform: translate(0, -50%);
+        height: $overlay-control-size * 2 + $overlay-control-padding * 2;
+
+        &:before,
+        &:after {
+            width: 46.5%;
+            transform: translate(-50%, -50%) rotate(45deg) translate(-4px, 4px);
+            transform-origin: 100% 50%;
+        }
+
+        &:after {
+            transform: translate(-50%, -50%) rotate(-45deg) translate(-4px, -4px);
+        }
+    }
+
+    &__btn-previous {
+        left: $overlay-margin;
+        right: auto;
+
+        // rotate btn-next 180deg to become a btn-previous
+        transform: translate(0, -50%) rotate(180deg);
+    }
+
+    &__media {
+        position: absolute;
+        top: $overlay-margin + 62px;
+        right: $overlay-control-size + $overlay-margin * 2;
+        bottom: $overlay-margin;
+        left: $overlay-control-size + $overlay-margin * 2;
+        margin: 7px;
+    }
+
+    &__heading {
+        position: absolute;
+        top: $overlay-margin + $overlay-control-size * 0.5;
+        left: $overlay-control-size + $overlay-margin * 2;
+        right: $overlay-control-size + $overlay-margin * 2;
+        text-align: center;
+        line-height: 1;
+
+        // moving up 50% + 2.5px results in a pixel perfect location
+        transform: translate(0, -50%) translate(0, -2.5px);
+    }
+
+    &__title {
+        display: inline-block;
+        color: $color-text;
+        margin: 0;
+        padding: 0 0 7px;
+        font-size: 1em;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-bottom: 2px solid $color-text;
+    }
+
+    &--hidden {
+        display: none;
+    }
+}
+
+body.overlay-visible {
+    overflow: hidden;
+}

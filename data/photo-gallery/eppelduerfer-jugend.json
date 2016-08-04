@@ -1,0 +1,167 @@
+[
+    {
+        "title": "Grouss Botz – 19. Mäerz 2016",
+        "image": {
+            "url": "/assets/photos/2016-03-19-grouss-botz.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/2016-03-19-grouss-botz-thumb.jpg",
+            "width": 800,
+            "height": 600
+        }
+    },
+    {
+        "title": "Buergbrennen – 14. Februar 2016",
+        "image": {
+            "url": "/assets/photos/2016-02-14-buergbrennen.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/2016-02-14-buergbrennen-thumb.jpg",
+            "width": 800,
+            "height": 800
+        }
+    },
+    {
+        "title": "Beforter Schlass – 29. August 2015",
+        "image": {
+            "url": "/assets/photos/2015-08-29-chateau-beaufort.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/2015-08-29-chateau-beaufort-thumb.jpg",
+            "width": 800,
+            "height": 600
+        }
+    },
+    {
+        "title": "Eppelduerfer Kiermes – 20. September 2014",
+        "image": {
+            "url": "/assets/photos/2014-09-20-kiermes-001.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/2014-09-20-kiermes-001-thumb.jpg",
+            "width": 800,
+            "height": 533
+        }
+    },
+    {
+        "title": "Buergsamschdeg 1994",
+        "image": {
+            "url": "/assets/photos/1994-buergsamschdeg.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/1994-buergsamschdeg-thumb.jpg",
+            "width": 800,
+            "height": 600
+        }
+    },
+    {
+        "title": "Grenoble",
+        "image": {
+            "url": "/assets/photos/grenoble.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/grenoble-thumb.jpg",
+            "width": 800,
+            "height": 543
+        }
+    },
+    {
+        "title": "Buergsamschdeg",
+        "image": {
+            "url": "/assets/photos/buergsamschdeg-001.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/buergsamschdeg-001-thumb.jpg",
+            "width": 800,
+            "height": 535
+        }
+    },
+    {
+        "title": "Buergsamschdeg",
+        "image": {
+            "url": "/assets/photos/buergsamschdeg-002.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/buergsamschdeg-002-thumb.jpg",
+            "width": 800,
+            "height": 531
+        }
+    },
+    {
+        "title": "Buergsamschdeg",
+        "image": {
+            "url": "/assets/photos/buergsamschdeg-003.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/buergsamschdeg-003-thumb.jpg",
+            "width": 800,
+            "height": 544
+        }
+    },
+    {
+        "title": "Buergsamschdeg 1984",
+        "image": {
+            "url": "/assets/photos/1984-buergsamschdeg.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/1984-buergsamschdeg-thumb.jpg",
+            "width": 800,
+            "height": 527
+        }
+    },
+    {
+        "title": "Buergsamschdeg 1983",
+        "image": {
+            "url": "/assets/photos/1983-buergsamschdeg.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/1983-buergsamschdeg-thumb.jpg",
+            "width": 800,
+            "height": 538
+        }
+    },
+    {
+        "title": "Buergsamschdeg 1982",
+        "image": {
+            "url": "/assets/photos/1982-buergsamschdeg.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/1982-buergsamschdeg-thumb.jpg",
+            "width": 800,
+            "height": 521
+        }
+    },
+    {
+        "title": "Eppelduerfer Jugend 1980",
+        "image": {
+            "url": "/assets/photos/1980-002.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/1980-002-thumb.jpg",
+            "width": 800,
+            "height": 544
+        }
+    },
+    {
+        "title": "Eppelduerfer Jugend 1980",
+        "image": {
+            "url": "/assets/photos/1980-001.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/1980-001-thumb.jpg",
+            "width": 800,
+            "height": 562
+        }
+    },
+    {
+        "title": "Eppeldorfer Dorfjugend – Revue, 7. Mäerz 1964",
+        "image": {
+            "url": "/assets/photos/1964-001.jpg"
+        },
+        "thumbnail": {
+            "url": "/assets/photos/1964-001-thumb.jpg",
+            "width": 800,
+            "height": 495
+        }
+    }
+]

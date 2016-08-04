@@ -1,0 +1,348 @@
+
+.animate {
+    animation-duration: 1.0s;
+    animation-fill-mode: both;
+
+    // fade in
+
+    &--fade-in {
+        animation-name: animate-fade-in;
+    }
+
+    @keyframes animate-fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    // fade in top
+
+    &--fade-in-top {
+        animation-name: animate-fade-in-top;
+        animation-timing-function: $easing-cat;
+    }
+
+    @keyframes animate-fade-in-top {
+        from {
+            opacity: 0;
+            transform: translate(0, -$slide-in-vertical-distance);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    &--fade-in-top-half {
+        animation-name: animate-fade-in-top-half;
+        animation-timing-function: $easing-cat;
+    }
+
+    @keyframes animate-fade-in-top-half {
+        from {
+            opacity: 0;
+            transform: translate(0, -$slide-in-vertical-distance * 0.5);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    &--fade-in-top-half-slow {
+        animation-name: animate-fade-in-top-half;
+        animation-timing-function: $easing-cat;
+        animation-duration: 1.5s;
+    }
+
+    // fade in right
+
+    &--fade-in-right {
+        animation-name: animate-fade-in-right;
+        animation-timing-function: $easing-cat;
+    }
+
+    @keyframes animate-fade-in-right {
+        from {
+            opacity: 0;
+            transform: translate($slide-in-horizontal-distance, 0);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    &--fade-in-right-x2 {
+        animation-name: animate-fade-in-right-x2;
+        animation-timing-function: $easing-cat;
+    }
+
+    @keyframes animate-fade-in-right-x2 {
+        from {
+            opacity: 0;
+            transform: translate($slide-in-horizontal-distance * 2, 0);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    // fade in bottom
+
+    &--fade-in-bottom {
+        animation-name: animate-fade-in-bottom;
+        animation-timing-function: $easing-cat;
+    }
+
+    @keyframes animate-fade-in-bottom {
+        from {
+            opacity: 0;
+            transform: translate(0, $slide-in-vertical-distance);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    &--fade-in-bottom-half {
+        animation-name: animate-fade-in-bottom-half;
+        animation-timing-function: $easing-cat;
+    }
+
+    @keyframes animate-fade-in-bottom-half {
+        from {
+            opacity: 0;
+            transform: translate(0, $slide-in-vertical-distance * 0.5);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    &--fade-in-bottom-half-slow {
+        animation-name: animate-fade-in-bottom-half;
+        animation-timing-function: $easing-cat;
+        animation-duration: 1.5s;
+    }
+
+    // fade in left
+
+    &--fade-in-left {
+        animation-name: animate-fade-in-left;
+        animation-timing-function: $easing-cat;
+    }
+
+    @keyframes animate-fade-in-left {
+        from {
+            opacity: 0;
+            transform: translate(-$slide-in-horizontal-distance, 0);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    &--fade-in-left-x2 {
+        animation-name: animate-fade-in-left-x2;
+        animation-timing-function: $easing-cat;
+    }
+
+    @keyframes animate-fade-in-left-x2 {
+        from {
+            opacity: 0;
+            transform: translate(-$slide-in-horizontal-distance * 2, 0);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    // fade zoom in bottom
+
+    &--fade-zoom-in-bottom {
+        animation-name: animate-fade-zoom-in-bottom;
+        transform-origin: 50% 100%;
+    }
+
+    @keyframes animate-fade-zoom-in-bottom {
+        from {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    // btn fade in top
+
+    &--btn-fade-in-top {
+        animation-name: animate-btn-fade-in-top;
+        animation-duration: 1.2s;
+    }
+
+    @keyframes animate-btn-fade-in-top {
+        0% {
+            opacity: 0;
+            color: transparent;
+            transform: translate(0, -50px) scale(1.0, 0.0);
+        }
+        30% {
+            color: transparent;
+        }
+        60% {
+            transform: none;
+        }
+        100% {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    // pin fade in
+
+    &--pin-fade-in {
+        animation-name: animate-pin-fade-in;
+        animation-duration: 0.4s;
+    }
+
+    @keyframes animate-pin-fade-in {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        30% {
+            color: transparent;
+        }
+        40% {
+            transform: scale(1.3);
+        }
+        100% {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    // blackboard fade in
+
+    &--blackboard-fade-in {
+        animation-name: animate-blackboard-fade-in;
+        animation-duration: 1.5;
+        transform-origin: 50% 0;
+        transform-style: preserve-3d;
+    }
+
+    @keyframes animate-blackboard-fade-in {
+        0% {
+            opacity: 0;
+            transform: perspective(3000px) rotateX(30deg);
+        }
+        15% {
+            opacity: 1;
+        }
+        25% {
+            transform: perspective(3000px) rotateX(-15deg);
+        }
+        55% {
+            transform: perspective(3000px) rotateX(10deg);
+        }
+        100% {
+            transform: none;
+        }
+    }
+
+    // spaghettisfest logo cutlery fade in
+
+    &--spaghettisfest-logo-cutlery-fade-in {
+        animation-name: animate-spaghettisfest-logo-cutlery-fade-in;
+        animation-duration: 0.4s;
+    }
+
+    @keyframes animate-spaghettisfest-logo-cutlery-fade-in {
+        0% {
+            opacity: 0;
+            transform: scale(2.0);
+        }
+        100% {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    // spaghettisfest logo line slide in
+
+    &--spaghettisfest-logo-line-right-slide-in {
+        animation-name: animate-spaghettisfest-logo-line-slide-in;
+        transform-origin: 0 50%;
+        animation-duration: 0.8s;
+    }
+
+    &--spaghettisfest-logo-line-left-slide-in {
+        animation-name: animate-spaghettisfest-logo-line-slide-in;
+        transform-origin: 100% 50%;
+        animation-duration: 0.8s;
+    }
+
+    @keyframes animate-spaghettisfest-logo-line-slide-in {
+        0% {
+            transform: scale(0, 1.0);
+        }
+        100% {
+            transform: none;
+        }
+    }
+}
+
+.animate-layer {
+    display: block;
+
+    &--absolute {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+// hide elements that are yet to be revealed
+//  only at the specified sizes
+@media (min-width: $break-md + 1) {
+    *[data-reveal*="lg"]:not(.revealed) {
+        opacity: 0.0 !important;
+    }
+}
+
+@media (min-width: $break-sm + 1) and (max-width: $break-md) {
+    *[data-reveal*="md"]:not(.revealed) {
+        opacity: 0.0 !important;
+    }
+}
+
+@media (min-width: $break-xs + 1) and (max-width: $break-sm) {
+    *[data-reveal*="sm"]:not(.revealed) {
+        opacity: 0.0 !important;
+    }
+}
+
+@media (max-width: $break-xs) {
+    *[data-reveal*="xs"]:not(.revealed) {
+        opacity: 0.0 !important;
+    }
+}
+
+// if no size is specified, this reveal animation will get triggered at all sizes
+//  therefore hide element at all sizes
+*[data-reveal]:not([data-reveal*="xs"]):not([data-reveal*="sm"]):not([data-reveal*="md"]):not([data-reveal*="lg"]):not(.revealed) {
+    opacity: 0.0 !important;
+}

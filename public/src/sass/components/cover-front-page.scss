@@ -1,0 +1,68 @@
+
+.cover-front-page {
+
+    &__logo {
+        display: block;
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        width: 280px;
+        height: 320px;
+        margin: -160px 0 0 -140px;
+    }
+
+    &__logo-part-1,
+    &__logo-part-2,
+    &__logo-part-3 {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        font-size: 0;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__logo-part-1 {
+        top: 14px;
+        height: 180px;
+
+        &:before {
+            @include icon('b');
+            font-size: 250px;
+        }
+    }
+
+    &__logo-part-2 {
+        top: 209px;
+        height: 50px;
+
+        &:before {
+            @include icon('c');
+            font-size: 242px;
+        }
+    }
+
+    &__logo-part-3 {
+        top: 263px;
+        height: 50px;
+
+        &:before {
+            @include icon('d');
+            font-size: 132px;
+        }
+    }
+
+    @media (max-width: $break-xs) {
+
+        &__logo {
+            top: 50%;
+        }
+    }
+}

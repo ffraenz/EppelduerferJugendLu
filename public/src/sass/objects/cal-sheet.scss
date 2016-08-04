@@ -1,0 +1,55 @@
+
+.cal-sheet {
+    $block: &;
+    display: inline-block;
+    border: 2px solid $color-text;
+    border-radius: 4px;
+    color: $color-text;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 10px 0 0;
+    padding: 6px;
+    line-height: 1;
+    font-size: 18px;
+
+    &__month {
+        text-transform: uppercase;
+        padding: 3px 0;
+        font-weight: 400;
+    }
+
+    &__day {
+
+    }
+
+    &--red {
+        border-color: $color-ci-red;
+        color: $color-ci-red;
+    }
+
+    &--strong {
+        border-width: 3px;
+
+        #{$block}__month {
+            font-weight: bold;
+        }
+    }
+
+    &--square {
+        width: 54px;
+        margin: 0 8px 0 0;
+        padding: 6px 0;
+
+        #{$block}__day {
+            display: block;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        #{$block}__month {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}

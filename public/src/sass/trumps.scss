@@ -1,0 +1,29 @@
+
+.hidden {
+    display: none;
+}
+
+@media (min-width: $break-md + 1) {
+
+    @for $i from 1 to 10 {
+        .order-#{$i}-lg {
+            order: $i;
+        }
+    }
+}
+
+@media (min-width: $break-sm + 1) and (max-width: $break-md) {
+
+    @for $i from 1 to 10 {
+        .order-#{$i}-lg {
+            order: $i;
+        }
+    }
+}
+
+@media (max-width: $break-xs) {
+
+    .hidden-xs {
+        display: none;
+    }
+}

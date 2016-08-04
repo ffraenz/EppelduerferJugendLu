@@ -1,0 +1,48 @@
+
+<nav class="site-nav site-header__nav"<?php echo (isset($reveal) ? ' data-reveal="' . escapeAttr($reveal) . '"' : '') ?>>
+    <h1 class="site-nav__brand<?php echo (isset($brandHidden) && $brandHidden === true ? ' site-nav__brand--hidden' : '') ?>">
+        <a class="site-nav__logo" href="<?php echo url('index') ?>">
+            <?php echo __("Eppelduerfer Jugend") ?>
+
+        </a>
+    </h1>
+    <ul class="site-nav__list">
+        <li class="site-nav__item site-nav__item--toggle">
+            <a class="site-nav__link" href="#" onclick="jQuery(this).closest('.site-nav').toggleClass('site-nav--expanded');return false;">
+                <span class="icon icon--hamburger"></span>
+                <?php echo __("Menü") ?>
+
+            </a>
+        </li>
+        <?php
+        foreach (getData('navigation') as $item) {
+            $route = getData('route');
+            $selected = false;
+            if ($route['type'] !== '404') {
+                $selected = ($item['route'] === $route['name']);
+            }
+            ?>
+
+        <li class="site-nav__item<?php echo $selected ? ' site-nav__item--selected' : '' ?>">
+            <a class="site-nav__link" href="<?php echo url($item['route']) ?>"<?php echo $selected ? ' data-action="scroll-to-content"' : '' ?>>
+                <?php echo __($item['title']) ?>
+
+            </a>
+        </li>
+        <?php } ?>
+
+        <li class="site-nav__item">
+            <?php if (getData('locale') === 'lb_LU') { ?>
+            <a class="site-nav__link" href="<?php echo url(getData('route')['name'], ['locale' => 'en_GB']) ?>">
+                <span class="icon icon--earth"></span>
+                EN
+            </a>
+            <?php } else { ?>
+            <a class="site-nav__link" href="<?php echo url(getData('route')['name'], ['locale' => 'lb_LU']) ?>">
+                <span class="icon icon--earth"></span>
+                LU
+            </a>
+            <?php } ?>
+        </li>
+    </ul>
+</nav>

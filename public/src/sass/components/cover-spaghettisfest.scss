@@ -1,0 +1,129 @@
+
+.cover-spaghettisfest {
+    color: #ffffff;
+
+    &__logo {
+        display: block;
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        width: 420px;
+        height: 150px;
+        margin: -75px 0 0 -210px;
+        transform: scale(1.25);
+        z-index: 1;
+    }
+
+    &__logo-part-line-left,
+    &__logo-part-line-right {
+        display: block;
+        position: absolute;
+        top: 71px;
+        right: 232px;
+        width: 83px;
+        height: 3px;
+        background: #ffffff;
+    }
+
+    &__logo-part-line-right {
+        right: auto;
+        left: 232px;
+    }
+
+    &__logo-part-year,
+    &__logo-part-cutlery,
+    &__logo-part-name {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        font-size: 0;
+        height: 50px;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__logo-part-year {
+        top: 0;
+
+        &:before {
+            @include icon('g');
+            font-size: 94px;
+        }
+    }
+
+    &__logo-part-cutlery {
+        top: 48px;
+
+        &:before {
+            @include icon('i');
+            font-size: 33px;
+        }
+    }
+
+    &__logo-part-name {
+        top: 99px;
+
+        &:before {
+            @include icon('h');
+            font-size: 400px;
+        }
+    }
+
+    &__spaghetti {
+        position: absolute;
+        left: 58%;
+        top: $nav-padding * 2 + $nav-height + 50px;
+        width: 1200px;
+        height: 1100px;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include icon('e');
+            font-size: 1200px;
+            color: $color-ci-red;
+        }
+    }
+
+    @media (max-height: 830px) {
+
+        &__logo {
+            transform: none;
+        }
+
+        &__spaghetti {
+            width: 700px;
+            height: 650px;
+
+            &:before {
+                font-size: 705px;
+            }
+        }
+    }
+
+    @media (max-width: $break-xs) {
+
+        &__logo {
+            transform: scale(0.7);
+        }
+
+        &__spaghetti {
+            width: 500px;
+            height: 475px;
+            top: 10%;
+
+            &:before {
+                font-size: 500px;
+            }
+        }
+    }
+}

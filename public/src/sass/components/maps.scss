@@ -1,0 +1,12 @@
+
+.maps {
+    display: block;
+
+    &__map {
+         height: 500px;
+    }
+
+    &__popover {
+        bottom: 150px;
+    }
+}

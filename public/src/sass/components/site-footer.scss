@@ -1,0 +1,48 @@
+
+.site-footer {
+    padding: 75px 0;
+    font-size: 0.85em;
+    background: $color-shaded;
+
+    .section--shaded + &,
+    .section--image + &,
+    .section--bottom-separated + & {
+        background: #ffffff;
+    }
+
+    &__logo {
+        display: block;
+        font-size: 0;
+        color: inherit;
+        text-align: center;
+        text-decoration: none;
+
+        &:before {
+            @include icon('a');
+            font-size: 190px;
+        }
+    }
+
+    &__label {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    &__value {
+        margin: 0 0 10px;
+    }
+
+    .row--separated > .row__item:before {
+        border-width: 0 0 0 1px;
+    }
+
+    @media (max-width: $break-xs) {
+        padding: 40px 0;
+        font-size: 1em;
+
+        .row--separated > .row__item:before {
+            border-width: 1px 0 0 0;
+        }
+    }
+}

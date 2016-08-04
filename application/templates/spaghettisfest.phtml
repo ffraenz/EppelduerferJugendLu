@@ -1,0 +1,328 @@
+<?php
+
+setTitle(__("Spaghettisfest"));
+
+$description = __("Säit iwwer 30 Joer versammelen sech op Maria Himmelfahrt, dem 15. August hongereg Leit zu Eppelduerf. Op dësem Dag gi mëttes an owes grouss Portioune Spaghetti gekacht an d’Zesummekomme bis an d’Nuecht era gefeiert.");
+
+setData([
+    'open_graph_image' =>
+        getData('base_url') . '/assets/share-image-spaghettisfest.png',
+    'open_graph_title' => __("Wëllkomm um gréisste Spaghettisfest an der Groussregioun!"),
+    'description' => $description,
+    'structured_data' => [
+        '@context' => 'http://schema.org',
+        '@type' => 'FoodEvent',
+        'name' => 'Spaghettisfest 2016',
+        'description' => $description,
+        'location' => [
+            '@type' => 'Place',
+            'name' => 'Pompjeessbau Eppelduerf',
+            'address' => [
+                '@type' => 'PostalAddress',
+                'addressCountry' => 'Luxembourg',
+                'addressLocality' => 'Eppeldorf',
+                'postalCode' => 'L-9365',
+                'streetAddress' => '14, Faubourg',
+            ],
+        ],
+        'startDate' => '2016-08-15T11:00:00+02:00',
+        'endDate' => '2016-08-16T03:00:00+02:00',
+        'url' => getData('page_url'),
+        'image' => getData('base_url') . '/assets/share-image-spaghettisfest.png',
+        'sameAs' => 'https://www.facebook.com/events/1673612406230014/',
+        'organizer' => [
+            '@type' => 'Organization',
+            'url' => url('index', ['force_canonical' => true]),
+        ],
+    ],
+]);
+
+renderTemplate('parts/header');
+
+$address = 'Faubourg 14, L-9365 Eppeldorf';
+$googleMapsUrl = sprintf('http://maps.google.com/?daddr=%s', urlencode($address));
+
+?>
+
+<header class="site-header site-header--hero site-header--spaghettisfest">
+    <?php
+    renderTemplate('parts/site-nav', [
+        'reveal' => 'fade-in 1.3s lg+md+sm',
+    ], 1);
+    ?>
+
+    <div class="site-header__inner">
+        <div class="cover-spaghettisfest">
+            <h2>
+                <a class="cover-spaghettisfest__logo" href="<?php echo url('spaghettisfest') ?>" data-action="scroll-to-content">
+
+                    <span class="cover-spaghettisfest__logo-part-year"
+                         data-reveal="fade-in-bottom-half-slow 0.6s">1985</span>
+
+                    <span class="cover-spaghettisfest__logo-part-line-left"
+                         data-reveal="spaghettisfest-logo-line-left-slide-in 0.15s"></span>
+
+                    <span class="cover-spaghettisfest__logo-part-cutlery"
+                         data-reveal="spaghettisfest-logo-cutlery-fade-in"></span>
+
+                    <span class="cover-spaghettisfest__logo-part-line-right"
+                         data-reveal="spaghettisfest-logo-line-right-slide-in 0.15s"></span>
+
+                    <span class="cover-spaghettisfest__logo-part-name"
+                         data-reveal="fade-in-top-half-slow 0.7s">Spaghettisfest</span>
+
+                </a>
+            </h2>
+            <div class="cover-spaghettisfest__spaghetti"></div>
+        </div>
+    </div>
+    <a class="site-header__scrollable" href="#" data-action="scroll-to-content" data-reveal="fade-in-top 1.3s"></a>
+</header>
+
+<section class="section section--align-center">
+    <div class="container">
+
+        <h3 class="section__heading" data-reveal="fade-in-bottom"><?php echo __("Wëllkomm um gréisste Spaghettisfest an der Groussregioun!") ?></h3>
+
+        <p data-reveal="fade-in-bottom 0.05s"><?php echo __("Säit iwwer 30 Joer versammelen sech op Maria Himmelfahrt, dem 15. August hongereg Leit zu Eppelduerf. Op dësem Dag gi mëttes an owes grouss Portioune Spaghetti gekacht an d’Zesummekomme bis an d’Nuecht era gefeiert.") ?> <?php echo __("D’Eppelduerfer Jugend ass prett a freet sech, Iech zerwéieren ze kënnen!") ?></p>
+
+        <div class="section__actions">
+            <ul class="row row--align-center">
+                <li class="row__item">
+                    <a class="btn btn--default" href="https://www.facebook.com/events/1673612406230014/" target="_blank" data-reveal="fade-in-bottom 0.5s">
+                        <span class="icon icon--facebook"></span>
+                        <?php echo __("Op Facebook deelhuelen") ?>
+                    </a>
+                </li>
+                <li class="row__item">
+                    <a class="btn btn--default" href="/assets/spaghettisfest.ics" data-reveal="fade-in-bottom 0.7s">
+                        <span class="icon icon--calendar"></span>
+                        <?php echo __("An de Kalenner androen") ?>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section class="section section--shaded section--spaghettisfest">
+    <div class="container">
+
+        <div class="row row--spacing-fixed row--margin-medium row--margin-medium-xs">
+            <div class="row__item">
+
+                <div class="blackboard blackboard--white" data-reveal="blackboard-fade-in 0.3s">
+                    <h3 class="blackboard__heading"><?php echo __("Ëffnungszäiten") ?></h3>
+
+                    <ul class="blackboard__list">
+                        <li class="blackboard__item">
+                            <span class="blackboard__label"><?php echo __("Datum") ?></span>
+                            <span class="blackboard__value"><?php echo __("15. August") ?></span>
+                        </li>
+                        <li class="blackboard__item" aria-hidden="true">
+                            <span class="blackboard__label">
+                                <span class="inline-dash inline-dash--white"><?php echo __("Spaghetti + Bar") ?></span>
+                            </span>
+                            <span class="blackboard__value">
+                                <span class="inline-dash inline-dash--white">11:00–14:00</span>
+                            </span>
+                        </li>
+                        <li class="blackboard__item">
+                            <span class="blackboard__label"><?php echo __("Spaghetti + Bar") ?></span>
+                            <span class="blackboard__value">11:00–14:00</span>
+                        </li>
+                        <li class="blackboard__item" aria-hidden="true">
+                            <span class="blackboard__label">
+                                <span class="inline-dash inline-dash--white"><?php echo __("Spaghetti + Bar") ?></span>
+                            </span>
+                            <span class="blackboard__value">
+                                <span class="inline-dash inline-dash--white">11:00–14:00</span>
+                            </span>
+                        </li>
+                        <li class="blackboard__item">
+                            <span class="blackboard__label"><?php echo __("Spaghetti + Bar") ?></span>
+                            <span class="blackboard__value">19:00–22:00</span>
+                        </li>
+                        <li class="blackboard__item">
+                            <span class="blackboard__label"><?php echo __("Bar") ?></span>
+                            <span class="blackboard__value">22:00–03:00</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row__item">
+
+                <div class="blackboard blackboard--white" data-reveal="blackboard-fade-in 0.6s">
+                    <h3 class="blackboard__heading"><?php echo __("Präisser") ?></h3>
+
+                    <ul class="blackboard__list">
+                        <li class="blackboard__item">
+                            <span class="blackboard__label"><?php echo __("Entrée") ?></span>
+                            <span class="blackboard__value"><?php echo __("Gratis") ?></span>
+                        </li>
+                        <li class="blackboard__item" aria-hidden="true">
+                            <span class="blackboard__label">
+                                <span class="inline-dash inline-dash--white"><?php echo __("All-You-Can-Eat") ?></span>
+                            </span>
+                            <span class="blackboard__value">
+                                <span class="inline-dash inline-dash--white">10,00 €</span>
+                            </span>
+                        </li>
+                        <li class="blackboard__item">
+                            <span class="blackboard__label"><?php echo __("All-You-Can-Eat") ?></span>
+                            <span class="blackboard__value">10,00 €</span>
+                        </li>
+                        <li class="blackboard__item">
+                            <span class="blackboard__label"><?php echo __("Kleng Portioun") ?></span>
+                            <span class="blackboard__value">7,00 €</span>
+                        </li>
+                        <li class="blackboard__item" aria-hidden="true">
+                            <span class="blackboard__label">
+                                <span class="inline-dash inline-dash--white"><?php echo __("Kleng Portioun") ?></span>
+                            </span>
+                            <span class="blackboard__value">
+                                <span class="inline-dash inline-dash--white">ab 1,50 €</span>
+                            </span>
+                        </li>
+                        <li class="blackboard__item">
+                            <span class="blackboard__label"><?php echo __("Gedrénks") ?></span>
+                            <span class="blackboard__value">ab 1,50 €</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="row__item">
+
+                <div class="blackboard blackboard--white" data-reveal="blackboard-fade-in 0.9s">
+                    <h3 class="blackboard__heading"><?php echo __("Variatiounen") ?></h3>
+
+                    <ul class="blackboard__list">
+                        <li><?php echo __("Bolognese") ?> <span class="icon icon--meat"></span></li>
+                        <li><?php echo __("Carbonara") ?> <span class="icon icon--meat"></span></li>
+                        <li><?php echo __("Pesto") ?> <span class="icon icon--leaf"></span></li>
+                        <li><?php echo __("Arabiata") ?> <span class="icon icon--leaf"></span><span class="icon icon--leaf"></span></li>
+                        <li class="blackboard__item" aria-hidden="true">
+                            <span class="inline-dash inline-dash--white inline-dash--width-full"></span>
+                        </li>
+                        <li class="blackboard__item">
+                            <?php echo __("Bäi all Portioun Spaghetti inkl.") ?>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section section--shaded section--margin-none">
+    <div class="maps"
+         data-location-lat="49.841028"
+         data-location-lng="6.248586"
+         data-location-title="Spaghettisfest"
+         data-location-icon="/assets/spaghettisfest-marker.svg"
+         data-zoom="11"
+         data-apikey="<?php echo getConfig('google_maps_browser_key') ?>">
+
+        <div class="maps__map"></div>
+        <div data-reveal="fade-in-top">
+            <div class="maps__popover popover popover--top">
+                <h3 class="hidden"><?php echo __("Urees") ?></h3>
+
+                <p style="margin-top: 0;">
+                    Pompjeessbau Eppelduerf<br>
+                    14, Faubourg<br>
+                    L-9365 Eppeldorf<br>
+                    Luxembourg
+                </p>
+
+                <a class="btn btn--default btn--block" href="<?php echo $googleMapsUrl ?>" target="_blank">
+                    <?php echo __("Urees plangen") ?>
+
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section section--align-center">
+    <div class="container">
+
+        <h3 class="section__heading"><?php echo __("Mat frëndlecher Ënnerstëtzung") ?></h3>
+
+        <ul class="row row--align-center">
+            <li class="row__item">
+                <a class="image-logo image-logo--sponsor" href="https://bcee.lu/" target="_blank">
+                    <img class="image-logo__image" src="/assets/sponsors/bcee.png" alt="Spuerkeess" title="Spuerkeess">
+                </a>
+            </li>
+            <li class="row__item">
+                <a class="image-logo image-logo--sponsor" href="https://friederes.lu/" target="_blank">
+                    <img class="image-logo__image" src="/assets/sponsors/friederes.png" alt="FF Friederes" title="FF Friederes">
+                </a>
+            </li>
+            <li class="row__item">
+                <a class="image-logo image-logo--sponsor" href="http://wietor.lu/" target="_blank">
+                    <img class="image-logo__image" src="/assets/sponsors/wietor.png" alt="Metzlerei Wietor" title="Metzlerei Wietor">
+                </a>
+            </li>
+            <li class="row__item">
+                <a class="image-logo image-logo--sponsor" href="http://www.liqueurs-du-chateau.lu/" target="_blank">
+                    <img class="image-logo__image" src="/assets/sponsors/liqueurs-beaufort.png" alt="Liqueurs du Château de Beaufort" title="Liqueurs du Château de Beaufort">
+                </a>
+            </li>
+            <li class="row__item">
+                <a class="image-logo image-logo--sponsor" href="https://eppelpress.lu/" target="_blank">
+                    <img class="image-logo__image" src="/assets/sponsors/eppelpress.png" alt="Eppelpress" title="Eppelpress">
+                </a>
+            </li>
+            <li class="row__item">
+                <a class="image-logo image-logo--sponsor" href="http://www.bamschoulwahl.lu/" target="_blank">
+                    <img class="image-logo__image" src="/assets/sponsors/wahl.png" alt="Bamschoul Martin Wahl" title="Bamschoul Martin Wahl">
+                </a>
+            </li>
+            <li class="row__item">
+                <a class="image-logo image-logo--sponsor" href="http://huss.lu/" target="_blank">
+                    <img class="image-logo__image" src="/assets/sponsors/husstec.png" alt="Husstec" title="Husstec">
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</section>
+
+<section class="section section--align-center section--shaded">
+    <div class="container">
+
+        <h3 class="section__heading"><?php echo __("Sharing is Caring") ?> <span class="icon icon--animated-heart"></span></h3>
+
+        <p><?php echo __("Du fënns dat esou cool wéi mir? Mir brauchen deng Hëllef! Behal et net fir dech, deel et, ziel et denge Leit weider a luet se an laanscht ze kommen, fir mat eis e richteg gudden Owend ze verbréngen!") ?></p>
+
+        <div class="section__actions">
+            <ul class="row row--align-center">
+                <li class="row__item">
+                    <a class="btn btn--facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(getData('page_url')) ?>" target="_blank">
+                        <span class="icon icon--facebook"></span>
+                        <?php echo __("Op Facebook deelen") ?>
+                    </a>
+                </li>
+                <li class="row__item">
+                    <a class="btn btn--twitter" href="https://twitter.com/intent/tweet?url=<?php echo urlencode(getData('page_url')) ?>" target="_blank">
+                        <span class="icon icon--twitter"></span>
+                        <?php echo __("Op Twitter deelen") ?>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<?php
+
+renderTemplate('parts/footer');

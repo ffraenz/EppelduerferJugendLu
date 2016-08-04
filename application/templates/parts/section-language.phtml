@@ -1,0 +1,14 @@
+
+<section class="section section--margin-none section--shaded">
+    <?php if (getData('locale') === 'lb_LU') { ?>
+    <a class="language-chooser" href="<?php echo url(getData('route')['name'], ['locale' => 'en_GB']) ?>">
+        <span class="icon icon--earth"></span>
+        You speak English? So do we!
+    </a>
+    <?php } else { ?>
+    <a class="language-chooser" href="<?php echo url(getData('route')['name'], ['locale' => 'lb_LU']) ?>">
+        <span class="icon icon--earth"></span>
+        Du schwätz Lëtzebuergesch? Mir och!
+    </a>
+    <?php } ?>
+</section>

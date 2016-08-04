@@ -1,0 +1,50 @@
+
+.public-transport {
+    column-count: 3;
+    column-gap: 30px;
+    font-size: 0.85em;
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__departure {
+        display: block;
+        padding: 8px 0;
+    }
+
+    &__line {
+        display: inline-block;
+        margin-right: 6px;
+        padding: 2px 4px 0;
+        border: 2px solid $color-ci-pink;
+        border-radius: 4px;
+        color: $color-ci-pink;
+        font-weight: bold;
+    }
+
+    &__time {
+        color: #777777;
+        font-weight: 500;
+    }
+
+    &__direction {
+        margin: 0 0 0 5px;
+
+        &:before {
+            @include icon('Q');
+            padding: 0 3px 2px 0;
+            font-size: 10px;
+        }
+    }
+
+    @media (max-width: $break-md) {
+        column-count: 2;
+    }
+
+    @media (max-width: $break-xs) {
+        column-count: 1;
+    }
+}
