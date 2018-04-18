@@ -131,43 +131,33 @@ function fetchPublicTransportDepartures()
 
 function fetchWeather()
 {
-    $weatherApiUrl = 'http://www.lcd.lu/meteo/weather_apps.php?type=actual&system=ios';
+    $weatherApiUrl = 'http://www.lcd.lu/meteo/current_json.php';
 
     $rawResponse = fetch($weatherApiUrl);
-    $response = @json_decode($rawResponse, true);
+    $response    = @json_decode($rawResponse, true);
 
     // check for errors or api unexpected changes
     if (
         $response === null ||
-        !isset($response['data']) ||
-        count($response['data']['weather']) !== 16
+        !isset($response['weather']) ||
+        count($response['weather']) == 0
     ) {
         return null;
     }
 
-    // collect values
-    $values = [];
-
-    foreach ($response['data']['weather'] as $property)
-    {
-        $value = isset($property['value']) ?
-            $property['value'][0]['value'] : $property['value_img'][0]['value'];
-
-        array_push($values, trim($value));
-    }
-
     // compose weather data
+    // ['weather'] has 3 sections => 1st section: weather data, so get items at [0][..]
     $weather = [
-        'condition' => $values[0],
-        'temperature' => $values[1],
-        'temperature_feels_like' => $values[2],
-        'pressure' => $values[3],
-        'pressure_sea_level' => $values[4],
-        'rain_last_half_hour' => $values[5],
-        'wind_speed' => $values[8],
-        'wind_direction' => $values[9],
-        'humidity' => $values[10],
-        'radioactivity' => $values[14],
+        'condition'              => $response['icon'],
+        'temperature'            => $response['temperature'],
+        'temperature_feels_like' => $response['weather'][0][1]['value'],
+        'pressure'               => $response['weather'][0][2]['value'],
+        'pressure_sea_level'     => $response['weather'][0][3]['value'],
+        'rain_last_half_hour'    => $response['weather'][0][4]['value'],
+        'wind_speed'             => $response['weather'][0][7]['value'],
+        'wind_direction'         => $response['weather'][0][8]['value'],
+        'humidity'               => $response['weather'][0][9]['value'],
+        'radioactivity'          => $response['weather'][0][15]['value'],
     ];
 
     return $weather;
